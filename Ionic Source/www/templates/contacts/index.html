@@ -1,0 +1,39 @@
+<link href="css/contacts.css" rel="stylesheet">
+<ion-view title="Contacts">
+ <ion-content>
+	<div class="list contacts-header no-margin">
+	  <div class="item item-divider light-bg positive">CONTACTS</div>
+		<a class="item item-icon-left item-icon-right" ui-sref="tab.recommended">
+			<i class="icon icon-linked positive"></i>
+			<span>
+				<span ng-show="contactRecommended.length >0">(+{{contactRecommended.length}})</span>
+				Recommended contacts
+			</span>
+			<i class="icon ion-ios-arrow-right"></i>
+		</a>
+		<a class="item item-icon-left" style="color:#98a2a7" ui-sref="tab.addContacts">
+			<i class="icon icon-add-border-dashed"></i>
+			<span>Add contacts</span>
+		</a>
+	</div>
+	<div class="list contacts-main">
+	<div ng-repeat="contact in contacts | orderBy:'name.$value'">
+		<div ng-if="$index == 0 || getAlpha($index)" class="item item-divider">{{contact.name.$value | firstChar}}</div>
+		<a class="item item-avatar" on-hold="showMenuSearch(contact.name.$value,contact.$id)" ui-sref="detail({id:contact.$id})">
+		  <img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
+		  <img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
+		  <div ng-show="timeNow - contact.lastSign.$value <120000" class="contact-status positive-bg"></div>
+		  <h2>{{contact.name.$value}}</h2>
+		</a>
+	</div>
+	</div>
+	<div class="text-center">
+		<div>{{contacts.length}} friends</div>
+		<button class="button button-positive width-60 margin-auto" ui-sref="tab.updateContacts">UPDATE PHONE BOOK</button>
+	</div>
+ </ion-content>
+	<ion-footer-bar align-title="left" class="bar-light">
+	  <button class="button button-icon ion-ios-search-strong" ui-sref="search"></button>
+	  <button class="button button-icon icon-add-person" ui-sref="tab.addContacts"></button>
+	</ion-footer-bar>
+</ion-view>

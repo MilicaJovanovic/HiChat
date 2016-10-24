@@ -1,0 +1,28 @@
+.title{padding:5px 0;}
+.title input{
+	height:100%;
+	background:none;
+	border-bottom:1px solid #6fc0f1;
+	color:#fff;
+	font-size:110%;
+	line-height:30px
+}
+.title input::-webkit-input-placeholder{color:#ddebfa}
+.title input::-ms-input-placeholder{color:#ddebfa}
+.title input::-moz-placeholder{color:#ddebfa}
+.list-recent .button.button-icon{
+	position:absolute;
+    top:6px;
+    right:16px
+}
+.item.item-divider{
+	font-size:80%;
+	background:none
+}
+.item.item-avatar{
+	padding:6px 16px 6px 72px;
+	line-height:40px;
+	min-height:52px;
+}
+.item.item-avatar img{top:6px}
+.item.item-avatar.group img{border-radius:0}

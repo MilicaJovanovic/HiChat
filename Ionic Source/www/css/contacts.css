@@ -1,0 +1,210 @@
+﻿.contacts-header .item-icon-left{padding-left:72px}
+.contacts-header .item-icon-left .icon{left:16px}
+.contacts-header .item-icon-left i:before{
+	font-size:40px;
+	width:40px
+}
+.contacts-header .item-icon-right .ion-ios-arrow-right:before{font-size:20px}
+.contacts-main{border-bottom:1px solid #ddd}
+.contacts-main .item-divider{
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.contacts-main .item{
+	position:relative;
+	min-height:0;
+	margin:0;
+	border:none;
+}
+.contacts-main .item img{top:5px}
+.contacts-main .contact-status{
+	position:absolute;
+	width:15px;
+	height:15px;
+	border:2px solid #fff;
+	border-radius:100%;
+	bottom:8px;
+	left:45px
+}
+
+.contacts-recommended .button{
+	position:absolute;
+	right:16px;
+	top:25px;
+	min-height:0;
+	line-height:27px
+}
+
+.popup-confirm-scan .popup{
+	background-color:#fdfefe;
+	border-radius:3px;
+	color:#7d8083
+}
+.popup-confirm-scan .popup-head{
+	border:none;
+	text-align:left
+}
+.confirm-permission{
+	float:left;
+	height:40px;
+	margin-right:10px
+}
+.confirm-permission img{height:20px}
+.popup-confirm-scan .popup-buttons{
+	width:60%;
+	margin-left:auto;
+	padding:0;
+	min-height:45px
+}
+.popup-confirm-scan .button{
+	font-size:90%;
+	color:#383d43!important
+}
+.popup-confirm-scan .button.button-scan{
+	color:#009df9!important
+}
+
+.contacts-nearby-main .list .item-divider{
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.contacts-nearby-main .list .item{
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+
+.modal-nearby-settings .item{line-height:25px}
+.modal-nearby-settings .button-bar .button{
+	padding:0;
+	min-height:25px;
+	line-height:25px;
+	background:#e6e6e6
+}
+.modal-nearby-settings .button-bar .button.active{
+	background:#f0f4f6;
+	color:#03a5fa
+}
+.modal-nearby-settings .button-bar > .button:first-child{
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+}
+.modal-nearby-settings .button-bar > .button:last-child{
+	border-top-right-radius:50px;
+	border-bottom-right-radius:50px;
+}
+.modal-nearby-settings .list .item-divider{
+	color:#929597;
+	text-transform:uppercase;
+	border:none!important;
+	font-size:100%
+}
+.modal-nearby-settings .list .item{
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+
+.invite-friend .title{line-height:22px}
+.invite-friend .title span{font-size:70%}
+.invite-friend .invite-footer{
+	position:absolute;
+	bottom:0;
+	width:100%
+}
+.invite-friend .invite-footer textarea{
+	width:100%;
+	overflow:auto;
+	min-height:70px;
+	max-height:100%;
+	border:1px solid #d6d6d6
+}
+
+.contacts-nearby-main .list .item-divider{
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.contacts-nearby-main .list .item{
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+.contacts-nearby-location .item-avatar{
+	padding:0;
+	padding-left:45px;
+	border:none;
+	min-height:0;
+	width:200px
+}
+.contacts-nearby-location .item-avatar img{
+	top:0;
+	left:0
+}
+.contacts-nearby-location .item-avatar .button{
+	position:absolute;
+	top:6px;
+	right:2px;
+	min-height:0px;
+	line-height:27px
+}
+.contacts-nearby-location .button.ion-android-locate{
+	position:absolute;
+    top:10px;
+    right:10px;
+    background:#fff;
+	width:32px;
+    min-height:32px;
+    border-radius:0;
+    line-height:28px;
+    font-size:20px;
+    border:1px solid #aaa;
+    padding:0;
+	color:#888b8e
+}
+.contacts-nearby-location .redo-search{
+	position:absolute;
+	top:0;
+	margin:0;
+	border-radius:0;
+	z-index:1;
+	border:5px solid #61605d
+}
+
+.popup-select-age .popup{
+	background-color:#fdfefe;
+	border-radius:3px;
+	color:#7d8083
+}
+.popup-select-age .popup-head{
+	border:none;
+	text-align:left
+}
+.popup-select-age .popup-buttons{
+	width:60%;
+	margin-left:auto;
+	padding:0;
+	min-height:45px
+}
+.popup-select-age .button{
+	font-size:90%;
+	color:#383d43!important
+}
+.popup-select-age .button.button-ok{
+	color:#009df9!important
+}
+.popup-select-age .select-item{line-height:50px}
+.popup-select-age .select-item.active{
+	color:#000;
+	border-top:1px solid #6ccaed;
+	border-bottom:1px solid #6ccaed
+}
+
+.gmnoprint,
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom
+{display:none}

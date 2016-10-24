@@ -1,0 +1,35 @@
+<link href="css/contacts.css" rel="stylesheet">
+<ion-modal-view class="modal-nearby-settings modal-full">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="cancelNearbySetting()"></button>
+  </div>
+  <h1 class="title no-margin-top">Advanced settings</h1>
+</ion-header-bar>
+<ion-content class="stable-bg">
+	<div class="list margin-bottom">
+		<div class="item item-divider light-bg">FILTER BY</div>
+		<div class="item">Gender
+			<div class="button-bar width-70 float-right">
+				<button class="button" ng-class="{'active':settings.gender=='All'}" ng-click="settings.gender='All'">ALL</button>
+				<button class="button" ng-class="{'active':settings.gender=='Male'}" ng-click="settings.gender='Male'">MALE</button>
+				<button class="button" ng-class="{'active':settings.gender=='Female'}" ng-click="settings.gender='Female'">FEMALE</button>
+			</div>
+		</div>
+		<div class="item item-icon-right" ng-click="selectRangeAge()">Range<span class="float-right">{{settings.fromage}} - {{settings.toage}} age</span>
+			<i class="icon ion-ios-arrow-right"></i></div>
+	</div>
+	<div class="list margin-bottom">
+		<div class="item item-divider light-bg">YOU ARE VISIBLE TO</div>
+		<div class="item">Gender
+			<div class="button-bar width-70 float-right">
+				<a class="button" ng-class="{'active':settings.visible=='All'}" ng-click="settings.visible='All'">ALL</a>
+				<a class="button" ng-class="{'active':settings.visible=='Male'}" ng-click="settings.visible='Male'">MALE</a>
+				<a class="button" ng-class="{'active':settings.visible=='Female'}" ng-click="settings.visible='Female'">FEMALE</a>
+			</div>
+		</div>
+	</div>
+	<button ng-click="updateNearbySetting()" class="button button-small button-positive padding-horizontal margin-auto width-50">UPDATE</button>
+</ion-content>
+</ion-view>
+</ion-modal-view>

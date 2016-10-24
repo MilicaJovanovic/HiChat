@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "vspfonts";
+	src: url("vspfonts.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-linked:before,
+.icon-add-border-dashed:before,
+.icon-add-person:before,
+.icon-smile:before,
+.icon-planes:before,
+.icon-status:before,
+.icon-info-border:before,
+.icon-key:before,
+.icon-calling:before,
+.icon-menu-right:before,
+.icon-text:before,
+.icon-missing-call:before,
+.icon-call-to:before,
+.icon-call-from:before,
+.icon-sound-wave:before,
+.icon-play-border:before,
+.icon-stop-border:before,
+.icon-map-location:before,
+.icon-planes-top:before,
+.icon-list-location:before,
+.icon-language:before,
+.icon-notification:before,
+.icon-camera:before,
+.icon-location:before,
+.icon-photo:before
+{
+	display: inline-block;
+	font-family: "vspfonts";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-rendering: auto;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-linked:before {content: "\e000";}
+.icon-add-border-dashed:before {content: "\e001";}
+.icon-add-person:before {content: "\e002";}
+.icon-planes:before {content: "\e003";}
+.icon-smile:before {content: "\e004";}
+.icon-status:before {content: "\e005";}
+.icon-info-border:before {content: "\e006";}
+.icon-key:before {content: "\e007";}
+.icon-calling:before {content: "\e008";}
+.icon-menu-right:before {content: "\e009";}
+.icon-text:before {content: "\e00a";}
+.icon-missing-call:before {content: "\e00b";}
+.icon-call-to:before {content: "\e00c";}
+.icon-call-from:before {content: "\e00d";}
+.icon-sound-wave:before {content: "\e00e";}
+.icon-play-border:before {content: "\e00f";}
+.icon-stop-border:before {content: "\e010";}
+.icon-map-location:before {content: "\e011";}
+.icon-planes-top:before {content: "\e012";}
+.icon-list-location:before {content: "\e013";}
+.icon-language:before {content: "\e014";}
+.icon-notification:before {content: "\e015";}
+.icon-camera:before {content: "\e016";}
+.icon-location:before {content: "\e017";}
+.icon-photo:before {content: "\e018";}

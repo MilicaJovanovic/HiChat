@@ -1,0 +1,53 @@
+<link href="css/group.css" rel="stylesheet">
+<ion-view title="Group">
+ <ion-content>
+	<div class="list group-header no-margin">
+	  <div class="item item-divider light-bg positive">GROUPS</div>
+		<a class="item item-icon-left" style="color:#98a2a7" ui-sref="createGroup">
+			<i class="icon icon-add-border-dashed"></i>
+			<span>Create news group</span>
+		</a>
+	</div>
+	<div class="list group-main">
+	  <div class="item item-divider light-bg no-border stable">Joined groups({{groups.length}}/100)</div>
+		<a class="item item-avatar" ng-repeat="group in groups" on-hold="showPopupMenuGroup(group.$id,group.nameGroup.$value,group.name)" ui-sref="groupDetail({id:group.$id})">
+		  <div class="group-avatar" ng-if="group.avatar.length == 3">
+				<div class="row row-center row-no-padding no-margin height-50">
+				<div class="col">
+					<img class="img-avatar" ng-if="group.avatar[0].$value" ng-src="{{group.avatar[0].$value}}">
+					<img class="img-avatar" ng-if="!group.avatar[0].$value" ng-src="css/img/avatar/{{group.name[0].$value | firstChar}}.png">
+				</div>
+				</div>
+				<div class="row row-center row-no-padding no-margin height-50">
+				<div ng-repeat="i in [1,2]" class="col">
+					<img class="img-avatar" ng-if="group.avatar[i].$value" ng-src="{{group.avatar[i].$value}}">
+					<img class="img-avatar" ng-if="!group.avatar[i].$value" ng-src="css/img/avatar/{{group.name[i].$value | firstChar}}.png">
+				</div>
+				</div>
+		  </div>
+		  <div class="group-avatar" ng-if="group.avatar.length == 4">
+				<div class="row row-center row-no-padding no-margin height-50">
+				<div ng-repeat="i in [0,1]" class="col">
+					<img class="img-avatar" ng-if="group.avatar[i].$value" ng-src="{{group.avatar[i].$value}}">
+					<img class="img-avatar" ng-if="!group.avatar[i].$value" ng-src="css/img/avatar/{{group.name[i].$value | firstChar}}.png">
+				</div>
+				</div>
+				<div class="row row-center row-no-padding no-margin height-50">
+				<div class="col">
+					<img class="img-avatar" ng-if="group.avatar[2].$value" ng-src="{{group.avatar[2].$value}}">
+					<img class="img-avatar" ng-if="!group.avatar[2].$value" ng-src="css/img/avatar/{{group.name[2].$value | firstChar}}.png">
+				</div>
+				<div class="col count-avatar">{{group.numUser.$value}}</div>
+				</div>
+		  </div>
+		  <div class="no-wrap group-name">
+			<span ng-if="group.nameGroup.$value" ng-bind="group.nameGroup.$value"></span>
+			<span ng-if="!group.nameGroup.$value" ng-repeat="item in group.name | limitTo:3">
+				{{item.$value}}<span ng-if="!$last">, </span>
+			</span>
+		  </div>
+		  <span>({{group.numUser.$value}})</span>
+		</a>
+	</div>
+ </ion-content>
+</ion-view>

@@ -1,0 +1,806 @@
+[
+{
+  "alpha" : "A",
+  "value" : [ {
+    "areacode" : "93",
+    "name" : "Afghanistan"
+  }, {
+    "areacode" : "355",
+    "name" : "Albania"
+  }, {
+    "areacode" : "213",
+    "name" : "Algeria"
+  }, {
+    "areacode" : "1684",
+    "name" : "American Samoa"
+  }, {
+    "areacode" : "376",
+    "name" : "Andorra"
+  }, {
+    "areacode" : "244",
+    "name" : "Angola"
+  }, {
+    "areacode" : "1264",
+    "name" : "Anguilla"
+  }, {
+    "areacode" : "672",
+    "name" : "Antarctica"
+  }, {
+    "areacode" : "1268",
+    "name" : "Antigua and Barbuda"
+  }, {
+    "areacode" : "54",
+    "name" : "Argentina"
+  }, {
+    "areacode" : "374",
+    "name" : "Armenia"
+  }, {
+    "areacode" : "297",
+    "name" : "Aruba"
+  }, {
+    "areacode" : "61",
+    "name" : "Australia"
+  }, {
+    "areacode" : "43",
+    "name" : "Austria"
+  }, {
+    "areacode" : "994",
+    "name" : "Azerbaijan"
+  } ]
+}, {
+  "alpha" : "B",
+  "value" : [ {
+    "areacode" : "1242",
+    "name" : "Bahamas"
+  }, {
+    "areacode" : "973",
+    "name" : "Bahrain"
+  }, {
+    "areacode" : "880",
+    "name" : "Bangladesh"
+  }, {
+    "areacode" : "1246",
+    "name" : "Barbados"
+  }, {
+    "areacode" : "375",
+    "name" : "Belarus"
+  }, {
+    "areacode" : "32",
+    "name" : "Belgium"
+  }, {
+    "areacode" : "501",
+    "name" : "Belize"
+  }, {
+    "areacode" : "229",
+    "name" : "Benin"
+  }, {
+    "areacode" : "1441",
+    "name" : "Bermuda"
+  }, {
+    "areacode" : "975",
+    "name" : "Bhutan"
+  }, {
+    "areacode" : "591",
+    "name" : "Bolivia"
+  }, {
+    "areacode" : "387",
+    "name" : "Bosnia and Herzegovina"
+  }, {
+    "areacode" : "267",
+    "name" : "Botswana"
+  }, {
+    "areacode" : "55",
+    "name" : "Brazil"
+  }, {
+    "areacode" : "246",
+    "name" : "British Indian Ocean Territory"
+  }, {
+    "areacode" : "1284",
+    "name" : "British Virgin Islands"
+  }, {
+    "areacode" : "673",
+    "name" : "Brunei"
+  }, {
+    "areacode" : "359",
+    "name" : "Bulgaria"
+  }, {
+    "areacode" : "226",
+    "name" : "Burkina Faso"
+  }, {
+    "areacode" : "257",
+    "name" : "Burundi"
+  } ]
+}, {
+  "alpha" : "C",
+  "value" : [ {
+    "areacode" : "855",
+    "name" : "Cambodia"
+  }, {
+    "areacode" : "237",
+    "name" : "Cameroon"
+  }, {
+    "areacode" : "1",
+    "name" : "Canada"
+  }, {
+    "areacode" : "238",
+    "name" : "Cape Verde"
+  }, {
+    "areacode" : "1345",
+    "name" : "Cayman Islands"
+  }, {
+    "areacode" : "236",
+    "name" : "Central African Republic"
+  }, {
+    "areacode" : "235",
+    "name" : "Chad"
+  }, {
+    "areacode" : "56",
+    "name" : "Chile"
+  }, {
+    "areacode" : "86",
+    "name" : "China"
+  }, {
+    "areacode" : "61",
+    "name" : "Christmas Island"
+  }, {
+    "areacode" : "61",
+    "name" : "Cocos Islands"
+  }, {
+    "areacode" : "57",
+    "name" : "Colombia"
+  }, {
+    "areacode" : "269",
+    "name" : "Comoros"
+  }, {
+    "areacode" : "682",
+    "name" : "Cook Islands"
+  }, {
+    "areacode" : "506",
+    "name" : "Costa Rica"
+  }, {
+    "areacode" : "385",
+    "name" : "Croatia"
+  }, {
+    "areacode" : "53",
+    "name" : "Cuba"
+  }, {
+    "areacode" : "599",
+    "name" : "Curacao"
+  }, {
+    "areacode" : "357",
+    "name" : "Cyprus"
+  }, {
+    "areacode" : "420",
+    "name" : "Czech Republic"
+  } ]
+}, {
+  "alpha" : "D",
+  "value" : [ {
+    "areacode" : "243",
+    "name" : "Democratic Republic"
+  }, {
+    "areacode" : "45",
+    "name" : "Denmark"
+  }, {
+    "areacode" : "253",
+    "name" : "Djibouti"
+  }, {
+    "areacode" : "1767",
+    "name" : "Dominica"
+  }, {
+    "areacode" : "1809",
+    "name" : "Dominican Republic"
+  }, {
+    "areacode" : "1829",
+    "name" : "Dominican Republic"
+  }, {
+    "areacode" : "1849",
+    "name" : "Dominican Republic"
+  } ]
+}, {
+  "alpha" : "E",
+  "value" : [ {
+    "areacode" : "670",
+    "name" : "East Timor"
+  },{
+    "areacode" : "593",
+    "name" : "Ecuador"
+  },{
+    "areacode" : "20",
+    "name" : "Egypt"
+  },{
+    "areacode" : "503",
+    "name" : "El Salvador"
+  },{
+    "areacode" : "240",
+    "name" : "Equatorial Guinea"
+  },{
+    "areacode" : "291",
+    "name" : "Eritrea"
+  },{
+    "areacode" : "372",
+    "name" : "Estonia"
+  },{
+    "areacode" : "251",
+    "name" : "Ethiopia"
+  } ]
+},{
+  "alpha" : "F",
+  "value" : [ {
+    "areacode" : "500",
+    "name" : "Falkland Islands"
+  },{
+    "areacode" : "298",
+    "name" : "Faroe Islands"
+  },{
+    "areacode" : "679",
+    "name" : "Fiji"
+  },{
+    "areacode" : "358",
+    "name" : "Finland"
+  },{
+    "areacode" : "33",
+    "name" : "France"
+  },{
+    "areacode" : "689",
+    "name" : "French Polynesia"
+  } ]
+},{
+  "alpha" : "G",
+  "value" : [ {
+    "areacode" : "241",
+    "name" : "Gabon"
+  },{
+    "areacode" : "220",
+    "name" : "Gambia"
+  },{
+    "areacode" : "995",
+    "name" : "Georgia"
+  },{
+    "areacode" : "49",
+    "name" : "Germany"
+  },{
+    "areacode" : "233",
+    "name" : "Ghana"
+  },{
+    "areacode" : "350",
+    "name" : "Gibraltar"
+  },{
+    "areacode" : "30",
+    "name" : "Greece"
+  },{
+    "areacode" : "299",
+    "name" : "Greenland"
+  },{
+    "areacode" : "1473",
+    "name" : "Grenada"
+  },{
+    "areacode" : "1671",
+    "name" : "Guam"
+  },{
+    "areacode" : "502",
+    "name" : "Guatemala"
+  },{
+    "areacode" : "441481",
+    "name" : "Guernsey"
+  },{
+    "areacode" : "224",
+    "name" : "Guinea"
+  },{
+    "areacode" : "245",
+    "name" : "GuineaBissau"
+  },{
+    "areacode" : "592",
+    "name" : "Guyana"
+  } ]
+}, {
+  "alpha" : "H",
+  "value" : [ {
+    "areacode" : "509",
+    "name" : "Haiti"
+  },{
+    "areacode" : "504",
+    "name" : "Honduras"
+  },{
+    "areacode" : "852",
+    "name" : "Hong Kong"
+  },{
+    "areacode" : "36",
+    "name" : "Hungary"
+  } ]
+},{
+  "alpha" : "I",
+  "value" : [ {
+    "areacode" : "354",
+    "name" : "Iceland"
+  },{
+    "areacode" : "91",
+    "name" : "India"
+  },{
+    "areacode" : "62",
+    "name" : "Indonesia"
+  },{
+    "areacode" : "98",
+    "name" : "Iran"
+  },{
+    "areacode" : "964",
+    "name" : "Iraq"
+  },{
+    "areacode" : "353",
+    "name" : "Ireland"
+  },{
+    "areacode" : "441624",
+    "name" : "Isle of Man"
+  },{
+    "areacode" : "972",
+    "name" : "Israel"
+  },{
+    "areacode" : "39",
+    "name" : "Italy"
+  },{
+    "areacode" : "225",
+    "name" : "Ivory Coast"
+  } ]
+},{
+  "alpha" : "J",
+  "value" : [ {
+    "areacode" : "1876",
+    "name" : "Jamaica"
+  },{
+    "areacode" : "81",
+    "name" : "Japan"
+  },{
+    "areacode" : "441534",
+    "name" : "Jersey"
+  },{
+    "areacode" : "962",
+    "name" : "Jordan"
+  } ]
+},{
+  "alpha" : "K",
+  "value" : [ {
+    "areacode" : "7",
+    "name" : "Kazakhstan"
+  },{
+    "areacode" : "254",
+    "name" : "Kenya"
+  },{
+    "areacode" : "686",
+    "name" : "Kiribati"
+  },{
+    "areacode" : "383",
+    "name" : "Kosovo"
+  },{
+    "areacode" : "965",
+    "name" : "Kuwait"
+  },{
+    "areacode" : "996",
+    "name" : "Kyrgyzstan"
+  } ]
+},{
+  "alpha" : "L",
+  "value" : [ {
+    "areacode" : "856",
+    "name" : "Laos"
+  },{
+    "areacode" : "371",
+    "name" : "Latvia"
+  },{
+    "areacode" : "961",
+    "name" : "Lebanons"
+  },{
+    "areacode" : "266",
+    "name" : "Lesotho"
+  },{
+    "areacode" : "231",
+    "name" : "Liberia"
+  },{
+    "areacode" : "218",
+    "name" : "Libya"
+  },{
+    "areacode" : "423",
+    "name" : "Liechtenstein"
+  },{
+    "areacode" : "370",
+    "name" : "Lithuania"
+  },{
+    "areacode" : "352",
+    "name" : "Luxembourg"
+  } ]
+},{
+  "alpha" : "M",
+  "value" : [ {
+    "areacode" : "853",
+    "name" : "Macau"
+  },{
+    "areacode" : "389",
+    "name" : "Macedonia"
+  },{
+    "areacode" : "261",
+    "name" : "Madagascar"
+  },{
+    "areacode" : "265",
+    "name" : "Malawi"
+  },{
+    "areacode" : "60",
+    "name" : "Malaysia"
+  },{
+    "areacode" : "960",
+    "name" : "Maldives"
+  },{
+    "areacode" : "223",
+    "name" : "Mali"
+  },{
+    "areacode" : "356",
+    "name" : "Malta"
+  },{
+    "areacode" : "692",
+    "name" : "Marshall Islands"
+  },{
+    "areacode" : "222",
+    "name" : "Mauritania"
+  },{
+    "areacode" : "230",
+    "name" : "Mauritius"
+  },{
+    "areacode" : "262",
+    "name" : "Mayotte"
+  },{
+    "areacode" : "52",
+    "name" : "Mexico"
+  },{
+    "areacode" : "691",
+    "name" : "Micronesia"
+  },{
+    "areacode" : "373",
+    "name" : "Moldova"
+  },{
+    "areacode" : "377",
+    "name" : "Monaco"
+  },{
+    "areacode" : "976",
+    "name" : "Mongolia"
+  },{
+    "areacode" : "382",
+    "name" : "Montenegro"
+  },{
+    "areacode" : "1664",
+    "name" : "Montserrat"
+  },{
+    "areacode" : "212",
+    "name" : "Morocco"
+  },{
+    "areacode" : "258",
+    "name" : "Mozambique"
+  },{
+    "areacode" : "95",
+    "name" : "Myanmar"
+  } ]
+},{
+  "alpha" : "N",
+  "value" : [ {
+    "areacode" : "264",
+    "name" : "Namibia"
+  },{
+    "areacode" : "674",
+    "name" : "Nauru"
+  },{
+    "areacode" : "977",
+    "name" : "Nepal"
+  },{
+    "areacode" : "31",
+    "name" : "Netherlands"
+  },{
+    "areacode" : "599",
+    "name" : "Netherlands Antilles"
+  },{
+    "areacode" : "687",
+    "name" : "New Caledonia"
+  },{
+    "areacode" : "64",
+    "name" : "New Zealand"
+  },{
+    "areacode" : "505",
+    "name" : "Nicaragua"
+  },{
+    "areacode" : "227",
+    "name" : "Niger"
+  },{
+    "areacode" : "234",
+    "name" : "Nigeria"
+  },{
+    "areacode" : "683",
+    "name" : "Niue"
+  },{
+    "areacode" : "850",
+    "name" : "North Korea"
+  },{
+    "areacode" : "1670",
+    "name" : "Northern Mariana Islands"
+  },{
+    "areacode" : "47",
+    "name" : "Norway"
+  } ]
+},{
+  "alpha" : "O",
+  "value" : [ {
+    "areacode" : "968",
+    "name" : "Oman"
+  } ]
+},{
+  "alpha" : "P",
+  "value" : [ {
+    "areacode" : "92",
+    "name" : "Pakistan"
+  },{
+    "areacode" : "680",
+    "name" : "Palau"
+  },{
+    "areacode" : "970",
+    "name" : "Palestine"
+  },{
+    "areacode" : "507",
+    "name" : "Panama"
+  },{
+    "areacode" : "675",
+    "name" : "Papua New Guinea"
+  },{
+    "areacode" : "595",
+    "name" : "Paraguay"
+  },{
+    "areacode" : "51",
+    "name" : "Peru"
+  },{
+    "areacode" : "63",
+    "name" : "Philippines"
+  },{
+    "areacode" : "64",
+    "name" : "Pitcairn"
+  },{
+    "areacode" : "48",
+    "name" : "Poland"
+  },{
+    "areacode" : "351",
+    "name" : "Portugal"
+  },{
+    "areacode" : "1787",
+    "name" : "Puerto Rico"
+  },{
+    "areacode" : "1939",
+    "name" : "Puerto Rico"
+  } ]
+},{
+  "alpha" : "Q",
+  "value" : [ {
+    "areacode" : "974",
+    "name" : "Qatar"
+  } ]
+},{
+  "alpha" : "R",
+  "value" : [ {
+    "areacode" : "242",
+    "name" : "Republic of the Congo"
+  },{
+    "areacode" : "262",
+    "name" : "Reunion"
+  },{
+    "areacode" : "40",
+    "name" : "Romania"
+  },{
+    "areacode" : "7",
+    "name" : "Russia"
+  },{
+    "areacode" : "250",
+    "name" : "Rwanda"
+  } ]
+}, {
+  "alpha" : "S",
+  "value" : [ {
+    "areacode" : "590",
+    "name" : "Saint Barthelemy"
+  },{
+    "areacode" : "290",
+    "name" : "Saint Helena"
+  },{
+    "areacode" : "1869",
+    "name" : "Saint Kitts and Nevis"
+  },{
+    "areacode" : "1758",
+    "name" : "Saint Lucia"
+  },{
+    "areacode" : "590",
+    "name" : "Saint Martin"
+  },{
+    "areacode" : "508",
+    "name" : "Saint Pierre and Miquelon"
+  },{
+    "areacode" : "1784",
+    "name" : "Saint Vincent and the Grenadines"
+  },{
+    "areacode" : "685",
+    "name" : "Samoa"
+  },{
+    "areacode" : "378",
+    "name" : "San Marino"
+  },{
+    "areacode" : "239",
+    "name" : "Sao Tome and Principe"
+  },{
+    "areacode" : "996",
+    "name" : "Saudi Arabia"
+  },{
+    "areacode" : "221",
+    "name" : "Senegal"
+  },{
+    "areacode" : "381",
+    "name" : "Serbia"
+  },{
+    "areacode" : "248",
+    "name" : "Seychelles"
+  },{
+    "areacode" : "232",
+    "name" : "Sierra Leone"
+  },{
+    "areacode" : "65",
+    "name" : "Singapore"
+  },{
+    "areacode" : "1721",
+    "name" : "Sint Maarten"
+  },{
+    "areacode" : "421",
+    "name" : "Slovakia"
+  },{
+    "areacode" : "386",
+    "name" : "Slovenia"
+  },{
+    "areacode" : "677",
+    "name" : "Solomon Islands"
+  },{
+    "areacode" : "252",
+    "name" : "Somalia"
+  },{
+    "areacode" : "27",
+    "name" : "South Africa"
+  },{
+    "areacode" : "82",
+    "name" : "South Korea"
+  },{
+    "areacode" : "211",
+    "name" : "South Sudan"
+  },{
+    "areacode" : "34",
+    "name" : "Spain"
+  },{
+    "areacode" : "94",
+    "name" : "Sri Lanka"
+  },{
+    "areacode" : "249",
+    "name" : "Sudan"
+  },{
+    "areacode" : "597",
+    "name" : "Suriname"
+  },{
+    "areacode" : "47",
+    "name" : "Svalbard and Jan Mayen"
+  },{
+    "areacode" : "268",
+    "name" : "Swaziland"
+  },{
+    "areacode" : "46",
+    "name" : "Sweden"
+  },{
+    "areacode" : "41",
+    "name" : "Switzerland"
+  },{
+    "areacode" : "963",
+    "name" : "Syria"
+  } ]
+},{
+  "alpha" : "T",
+  "value" : [ {
+    "areacode" : "886",
+    "name" : "Taiwan"
+  },{
+    "areacode" : "992",
+    "name" : "Tajikistan"
+  },{
+    "areacode" : "255",
+    "name" : "Tanzania"
+  },{
+    "areacode" : "66",
+    "name" : "Thailand"
+  },{
+    "areacode" : "228",
+    "name" : "Togo"
+  },{
+    "areacode" : "690",
+    "name" : "Tokelau"
+  },{
+    "areacode" : "676",
+    "name" : "Tonga"
+  },{
+    "areacode" : "1868",
+    "name" : "Trinidad and Tobago"
+  },{
+    "areacode" : "216",
+    "name" : "Tunisia"
+  },{
+    "areacode" : "90",
+    "name" : "Turkey"
+  },{
+    "areacode" : "993",
+    "name" : "Turkmenistan"
+  },{
+    "areacode" : "1649",
+    "name" : "Turks and Caicos Islands"
+  },{
+    "areacode" : "688",
+    "name" : "Tuvalu"
+  } ]
+}, {
+  "alpha" : "U",
+  "value" : [ {
+    "areacode" : "1340",
+    "name" : "U.S. Virgin Islands"
+  },{
+    "areacode" : "256",
+    "name" : "Uganda"
+  },{
+    "areacode" : "380",
+    "name" : "Ukraine"
+  },{
+    "areacode" : "971",
+    "name" : "United Arab Emirates"
+  },{
+    "areacode" : "44",
+    "name" : "United Kingdom"
+  },{
+    "areacode" : "1",
+    "name" : "United States"
+  },{
+    "areacode" : "598",
+    "name" : "Uruguay"
+  },{
+    "areacode" : "998",
+    "name" : "Uzbekistan"
+  } ]
+}, {
+  "alpha" : "V",
+  "value" : [ {
+    "areacode" : "678",
+    "name" : "Vanuatu"
+  },{
+    "areacode" : "379",
+    "name" : "Vatican"
+  },{
+    "areacode" : "58",
+    "name" : "Venezuela"
+  },{
+    "areacode" : "84",
+    "name" : "Vietnam"
+  } ]
+},{
+  "alpha" : "W",
+  "value" : [ {
+    "areacode" : "681",
+    "name" : "Wallis and Futuna"
+  },{
+    "areacode" : "212",
+    "name" : "Western Sahara"
+  } ]
+},{
+  "alpha" : "Y",
+  "value" : [ {
+    "areacode" : "976",
+    "name" : "Yemen"
+  } ]
+},{
+  "alpha" : "Z",
+  "value" : [ {
+    "areacode" : "260",
+    "name" : "Zambia"
+  }, {
+    "areacode" : "263",
+    "name" : "Zimbabwe"
+  } ]
+} ]

@@ -1,0 +1,278 @@
+.bar .title.title-chose-messages{
+	height:49px;
+	line-height:49px
+}
+.message-count{
+	position:absolute;
+	left:45px;
+	font-size:10px;
+	background:#fc4a4a;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	border-radius:100%;
+	color:#fff;
+	z-index:1
+}
+.message-time{
+	position:absolute;
+	top:15px;
+	right:15px;
+	font-size:12px
+}
+
+.modal-chose-messages{
+	width:100%;
+	height:100%;
+	top:0;
+	bottom:0;
+	left:0
+}
+.chose-messages.slide-in-up{transition:none!important}
+.chose-messages .bar.bar-stable{background-image:none}
+.chose-messages input[type="checkbox"]{display:none}
+.chose-messages .status-check{
+	display:none;
+	position:absolute;
+	top:16px;
+	left:16px;
+	width:40px;
+	height:40px;
+	background-image:url("img/icon-checked.png");
+}
+.chose-messages input[type="checkbox"]:checked+label{background-color:#dbf0f5}
+.chose-messages input[type="checkbox"]:checked+label .status-check{display:block}
+.chose-messages .message-index label img{
+	position:absolute;
+    top:16px;
+    left:16px;
+    max-width:40px;
+    max-height:40px;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+
+.messages-detail .menu-right-active{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.7);
+	z-index:11
+}
+.messages-detail .menu-right .item>span{
+    width:120px;
+    display:inline-block;
+}
+.messages-detail .menu-right .track{
+	border:none;
+	background:#e6e6e6
+}
+.messages-detail .menu-right .toggle input:checked + .track{background:#e6e6e6}
+.messages-detail .menu-right .track .handle{
+	background:#b6b6b6;
+	color:#fff
+}
+.messages-detail .menu-right .toggle input:checked + .track .handle{background:#03a5fa}
+.messages-detail .menu-right .handle:before{
+	padding:10px;
+	padding-left:24px;
+	content:"OFF";
+	font-size:80%
+}
+.messages-detail .menu-right .toggle input:checked + .track .handle:before{
+	content:"ON";
+	padding-left:26px;
+}
+
+.popup-menu-messages .popup{background:#fff}
+.popup-menu-messages .popup-head{
+	text-align:left;
+	border:none
+}
+.popup-menu-messages .popup-buttons{
+	padding:0;
+	min-height:0px;
+	display:block
+}
+.popup-menu-messages .popup-buttons button{
+	width:100%;
+	text-align:left;
+	color:#000
+}
+.messages-detail .bar-positive .title{line-height:22px;padding:5px 0}
+.messages-detail .bar-positive .title h6{color:#92ccf3}
+.messages-detail .buttons .button:before{font-size:25px}
+.messages-detail ion-content.stable-bg{background:#d3dae0}
+.messages-detail .row + .row{margin-top:0}
+.conversation-time span{
+	background:#aeb4b8;
+	padding:2px 5px;
+	color:#fff;
+	border-radius:50px;
+	font-size:10px
+}
+.col.col-top.col-10 img{float:right}
+.row-reverse .col.col-top.col-10 img{float:left}
+.messages-from{
+	position:absolute;
+    width:10px;
+    height:16px;
+	line-height:16px;
+	font-size:16px;
+    top:10px;
+	color:#fff;
+}
+.messages-from.friend{left:-4px}
+.row-reverse .messages-from{
+	color:#d2f0fe;
+	right:-4px
+}
+.messages-detail .list-messages{
+	padding:6px;
+	border-radius:5px;
+	box-shadow:0 1px 1px #b1bbc4;
+	display:inline-block;
+	margin-bottom:5px;
+	background:#fff;
+	position:relative
+}
+.row-reverse .list-messages{
+	background:#d2f0fe;
+	float:right
+}
+.messages-detail .list-messages img{
+	border-radius:5px;
+	float:left
+}
+.messages-detail .list-messages i{
+	font-size:24px;
+	margin-right:3px;
+	color:#03a5fa
+}
+.messages-detail .list-messages .messages-note{
+	color:#e59502;
+	position:absolute;
+    font-size:20px;
+    top:50%;
+	margin-top:-10px;
+}
+.messages-detail .list-messages .messages-note.friend{right:-15px;}
+.row-reverse .list-messages .messages-note{
+	left:-15px;
+	transform:rotate(180deg);
+}
+.messages-detail .send-messages-status{
+	padding:2px 5px;
+	background:#aeb4b8;
+	display:inline-block;
+	border-radius:50px
+}
+.messages-detail-footer{
+	position:fixed;
+	bottom:0;
+	overflow:hidden
+}
+.messages-detail-footer .tabs{
+	border:none;
+	background:#fff
+}
+.messages-detail-footer .tab-item{color:#83919b!important}
+.messages-detail-footer .tab-item:hover{border:none!important}
+.messages-detail-footer .tab-item-active{
+	border:none!important;
+	color:#0084ff!important
+}
+.messages-detail-footer ion-content{
+	top:50px;
+	background:none!important
+}
+.messages-input-text{height:50px}
+.messages-input-text .button-icon{font-size:32px}
+.messages-input-picture{
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-top:1px solid #e7e7e7;
+	border-bottom:1px solid #e7e7e7
+}
+
+.button-icon.send-camera{
+	position:absolute;
+	bottom:15px;
+	left:50%;
+	width:50px;
+	height:50px;
+	margin-left:-25px;
+	background:#fff;
+	border-radius:100%;
+	font-size:32px
+}
+
+.messages-input-sticker{
+	width:25%;
+	padding:10px 0
+}
+.messages-input-sticker img{
+	width:40px;
+	height:40px;
+	display:block;
+	margin:0 auto
+}
+
+.button-record{
+	width:80px;
+	height:80px;
+	border-radius:100%
+}
+.button-record:hover{
+	width:90px;
+	height:90px;
+	border:15px solid #e5e5e5
+}
+.button-record.button-light.assertive{
+	background:#fff;
+	color:#ff645d;
+	border-color:#fff
+}
+.assertive.light{color:#fff}
+
+.modal-call{
+	background:url('img/bg-call.jpg');
+	color:#fff
+}
+.modal-call img{
+	position:absolute;
+	border-style:solid;
+	border-color:#28aef3;
+	background:#5ec3f8;
+	border-radius:100%;
+	z-index:-1;
+}
+.modal-call h3,h5{color:#fff}
+.modal-call .call-button{
+	width:240px;
+	height:100px
+}
+.modal-call .call-button .button{
+	float:left;
+	width:60px;
+	height:60px;
+	margin:10px;
+	background:#0192da;
+	color:#80c9ed;
+	font-size:12px
+}
+.modal-call .call-button .button:before{font-size:32px}
+.modal-call .call-button .button.active{
+	background:#02a6fa;
+	color:#fff
+}
+.modal-call .call-button .button div{
+	position:absolute;
+    width:100%;
+    left:0;
+    text-align:center;
+}

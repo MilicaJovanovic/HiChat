@@ -1,0 +1,76 @@
+<link href="css/messages.css" rel="stylesheet">
+<ion-view class="messages-detail">
+<ion-side-menus enable-menu-with-back-views="true">
+<ion-side-menu side="right" class="right-menu" width="265">
+  <ion-content scroll="false" class="light-bg">
+	<div class="list">
+		<div class="item item-avatar">
+		  <img ng-if="Friend.avatar" ng-src="{{Friend.avatar}}">
+		  <img ng-if="!Friend.avatar" ng-src="css/img/avatar/{{Friend.name | firstChar}}.png">
+		<span style="line-height:38px">{{Friend.name}}</span></div>
+		<div class="item"><span>Date of birth</span>{{Friend.birthday}}</div>
+		<div class="item"><span>Gender</span>{{Friend.gender}}</div>
+		<div class="item"><span>Phone number</span>+{{Friend.phone}}</div>
+		<li class="item item-toggle">
+			 Block this person
+			 <label class="toggle">
+			   <input type="checkbox" ng-model="Block.$value" ng-click="blockPerson()">
+			   <div class="track">
+				 <div class="handle"></div>
+			   </div>
+			 </label>
+		</li>
+		<div class="item" ng-click="clearHistory()">Clear chat history</div>
+	</div>
+  </ion-content>
+</ion-side-menu>
+<ion-side-menu-content drag-content="false">
+<div ng-show="menuRightActived" class="menu-right-active" menu-close ng-click="menuRightActive()"></div>
+<ion-nav-bar align-title="left" class="bar-positive" ng-controller="messagesCall">
+	<ion-nav-title>
+		<div>{{Friend.name}} <i class="icon ion-volume-high"></i></div>
+		<h6 class="no-margin stable">{{Friend.lastSign | sinceTime}}</h6>
+	</ion-nav-title>
+	<ion-nav-buttons side="left">
+		<button class="button button-icon button-clear ion-android-arrow-back" ui-sref="tab.messages"></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<a class="button button-icon button-clear icon-calling" ng-href="tel:+{{Friend.phone}}"></a>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="secondary">
+		<button class="button button-icon button-clear icon-menu-right" menu-toggle="right"></button>
+	</ion-nav-buttons>
+</ion-nav-bar>
+<ion-content class="padding-horizontal stable-bg" style="bottom:{{contentBottom}}" delegate-handle="mainScroll">
+	<div ng-repeat="item in Detail">
+		<div ng-if="item.time - Detail[$index-1].time >= 86400000" class="text-center padding-vertical conversation-time"><span>{{item.time | date:"dd/MM/yyyy"}}</span></div>
+		<div class="row row-no-padding" ng-class="{'row-reverse':item.from==0}">
+			<div ng-if="item.from == 0" class="col col-top col-10 margin-left float-right"><div ng-if="Detail[$index-1].from != 0 || item.time - Detail[$index-1].time >= 86400000" style="overflow:auto">
+				<img class="img-avatar" ng-if="Me.avatar.$value" ng-src="{{Me.avatar.$value}}">
+				<img class="img-avatar" ng-if="!Me.avatar.$value" ng-src="css/img/avatar/{{Me.name.$value | firstChar}}.png">
+			</div></div>
+			<div ng-if="item.from == 1" class="col col-top col-10 margin-right"><div ng-if="Detail[$index-1].from != 1 || item.time - Detail[$index-1].time >= 86400000" style="overflow:auto">
+				<img class="img-avatar" ng-if="Friend.avatar" ng-src="{{Friend.avatar}}">
+				<img class="img-avatar" ng-if="!Friend.avatar" ng-src="css/img/avatar/{{Friend.name | firstChar}}.png">
+			</div></div>
+			<div class="col col-80 relative">
+				<span ng-if="item.from != Detail[$index-1].from || item.time - Detail[$index-1].time >= 86400000" class="messages-from ion-arrow-up-b" ng-class="{'friend':item.from==1}"></span>
+				<div class="width-100">
+					<span class="list-messages" on-hold="showPopupMenuMessages(item.type,item.content,item.$id)">
+						<span ng-if="item.type=='text'">{{item.content}}</span>
+						<img ng-if="item.type=='sticker'" ng-src="css/img/sticker/{{item.content}}.png">
+						<img ng-if="item.type=='picture'" ng-src="{{item.content}}">
+						<a ng-if="item.type=='location'" ng-click="openLink('https://google.com/maps/?q={{item.content.lat}},{{item.content.lng}}')">
+							<img ng-src="{{getMap}}center={{item.content.lat}},{{item.content.lng}}&zoom=18&size=300x300&markers=color:red%7Clabel:S%7C{{item.content.lat}},{{item.content.lng}}">
+						</a>
+						<div ng-if="item.from != Detail[$index+1].from" class="stable">{{item.time | date:'HH:mm'}}</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>
+<div ng-if="!Block.$value" class="width-100 messages-detail-footer" style="height:{{contentBottom}}" ng-include="'templates/messages/tabs-input.html'"></div>
+</ion-side-menu-content>
+</ion-side-menus>
+</ion-view>

@@ -1,0 +1,40 @@
+<link href="css/search.css" rel="stylesheet" type="text/css">
+<ion-view title="Search">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+	<button class="button" ui-sref="tab.messages">
+		<i class="icon ion-android-arrow-back"></i>
+	</button>
+  </div>
+  <div class="title">
+	<input type="text" placeholder="Search" ng-model="search.name.$value" class="width-100 no-padding">
+  </div>
+</ion-header-bar>
+<ion-content>
+<div ng-hide="search.name.$value">
+	<div class="item item-divider no-border">
+		RECENT SEARCH RESULTS
+		<span class="float-right" ng-show="!modeEdit" ng-click="modeEdit = true">EDIT</span>
+		<span class="float-right" ng-show="modeEdit" ng-click="modeEdit = false">DONE</span>
+	</div>
+	<div ng-if="Recent | isEmpty" class="padding text-center">Empty list</div>
+	<div ng-if="Recent" class="list list-recent no-margin">
+		<div class="item item-avatar no-border" ng-repeat="contact in Recent">
+			<img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}" ng-click="showMenuSearch(contact.name.$value,contact.id)">
+			<img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png" ng-click="showMenuSearch(contact.name.$value,contact.id)">
+			<div ng-click="viewMessages(contact.id)">{{contact.name.$value}}</div>
+			<button ng-show="modeEdit" class="button button-icon ion-close" ng-click="deleteRecent(contact.name.$value,contact.id)"></button>
+		</div>
+	</div>
+</div>
+<div ng-hide="!search.name.$value || count.length < 1" class="list no-margin">
+<div class="item item-divider no-border">RESULTS FROM CONTACTS</div>
+	<li class="item item-avatar no-border" ng-repeat="contact in Search | filter:search as count">
+		<img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}" ng-click="showMenuSearch(contact.name.$value,contact.id)">
+		<img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png" ng-click="showMenuSearch(contact.name.$value,contact.id)">
+		<div ng-click="choseContact(contact)">{{contact.name.$value}}</div>
+	</li>
+</div>
+<div class="text-center padding" ng-if="count.length < 1">No resuilt</div>
+</ion-content>
+</ion-view>

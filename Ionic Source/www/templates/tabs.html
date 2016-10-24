@@ -1,0 +1,16 @@
+<link href="css/tabs.css" rel="stylesheet">
+<style ng-if="notification.messagesNew">ion-tabs .ion-chatbubble-working:after{content:'{{notification.messagesNew}}'}</style>
+<ion-tabs ng-class="{'tabs-item-hide': $root.hideTabs}" class="tabs-positive tabs-icon tabs-color-active-light">
+  <ion-tab icon="ion-chatbubble-working status-notification" ui-sref="tab.messages">
+    <ion-nav-view name="tab-messages"></ion-nav-view>
+  </ion-tab>
+  <ion-tab icon="ion-person" ui-sref="tab.contacts">
+    <ion-nav-view name="tab-contacts"></ion-nav-view>
+  </ion-tab>
+  <ion-tab icon="ion-ios-people" ui-sref="tab.group">
+    <ion-nav-view name="tab-group"></ion-nav-view>
+  </ion-tab>
+  <ion-tab icon="ion-android-more-horizontal" ui-sref="tab.settings">
+    <ion-nav-view name="tab-settings"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

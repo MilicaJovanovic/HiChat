@@ -1,0 +1,110 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Messages and notifications" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ui-sref="tab.settings"></button>
+  </div>
+  <h1 class="title">Messages and notifications</h1>
+</ion-header-bar>
+<ion-content class="messages-main">
+<div class="list">
+	<div class="item item-divider light-bg stable">Messages</div>
+	<li class="item item-toggle">
+	<span>Auto play voice messages</span><p>Turn on to auto play new voice messages</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('auto_play')">
+       <input type="checkbox" ng-model="settings.messages.auto_play">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Reply SMS with Hichat</span><p>Turn on to reply text messages via Hichat</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('reply_sms')">
+       <input type="checkbox" ng-model="settings.messages.reply_sms">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Replace send button with Enter</span><p>Turn on to send messages by pressing Enter button on keyboard</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('replace_send')">
+       <input type="checkbox" ng-model="settings.messages.replace_send">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Show “Seen” status</span><p>If you and your friend turn this on, it will show Seen status below every messages</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('show_seen')">
+       <input type="checkbox" ng-model="settings.messages.show_seen">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Remind your friend's birthday</span><p>Turn this on to receive friend's birthday notifications</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('remind_friend')">
+       <input type="checkbox" ng-model="settings.messages.remind_friend">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Display sticker suggestions</span><p>Display sticker suggestions based on entered text.</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('display_sticker')">
+       <input type="checkbox" ng-model="settings.messages.display_sticker">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<a class="item item-icon-right"><span>Background image</span><p>Change default background image</p>
+	<i class="icon ion-ios-arrow-right"></i></a>
+	<a class="item item-icon-right"><span>Backup & Restore</span><p>Backup messages to server and restore them on demand</p>
+	<i class="icon ion-ios-arrow-right"></i></a>
+	
+	<div class="item item-divider light-bg stable">Incomming Messages</div>
+	<li class="item item-toggle">
+	<span>Play sound on incoming messages</span><p>On incoming messages</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('play_sound')">
+       <input type="checkbox" ng-model="settings.messages.play_sound">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Vibrate on messages</span><p>On incoming messages</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('vibrate')">
+       <input type="checkbox" ng-model="settings.messages.vibrate">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Show notifications from incoming messages</span><p>Show notifications in the notification bar when receiving messages</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('notification')">
+       <input type="checkbox" ng-model="settings.messages.notification">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<li class="item item-toggle">
+	<span>Messages preview</span><p>Show messages in notification bar</p>
+     <label class="toggle toggle-calm" ng-click="changeMessages('preview')">
+       <input type="checkbox" ng-model="settings.messages.preview">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<link href="css/contacts.css" rel="stylesheet">
+<ion-view title="Add Contacts" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="goBack()"></button>
+  </div>
+  <h1 class="title">Add contacts</h1>
+</ion-header-bar>
+ <ion-content scroll="false" ng-controller="areacodeCtrl">
+	<div class="list add-contacts-main no-margin no-padding">
+	  <div class="item item-divider">Add contacts by phone number</div>
+	  <div ng-if="warning" class="light-bg text-center assertive">No result.<br/>Please try again.</div>
+	  <a class="item item-icon-right" ng-click="showareaCode()">{{choseArea.name}} (+{{choseArea.areacode}})<i class="icon ion-ios-arrow-right"></i></a>
+	  <div class="item item-input" style="padding-right:10px">
+		<input ng-model="data.phone" type="number" class="width-80" placeholder="Enter phone number">
+		<button class="button button-small button-clear" ng-click="data.phone=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+		<button ng-disabled="!data.phone" class="button button-small padding-horizontal button-positive" ng-click="searchPerson(data.phone)">Search</button>
+	  </div>
+	</div>
+	<div class="list add-contacts-footer">
+	  <div class="item item-divider"></div>
+		<a class="item item-avatar no-margin-bottom" ui-sref="tab.nearbyContacts">
+			<img src="css/img/icon-rada-scan.png">
+			<span>Scan contacts Nearby</span>
+			<p>Discover contacts around you</p>
+		</a>
+		<a class="item item-avatar no-border no-margin-bottom" ng-click="inviteSms()">
+			<img src="css/img/icon-sms-border.png">
+			<span>Invite contacts via phonebook</span>
+			<p>Invite contact via SMS</p>
+		</a>
+	</div>
+ </ion-content>
+</ion-view>

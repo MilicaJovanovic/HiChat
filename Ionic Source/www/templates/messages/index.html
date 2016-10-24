@@ -1,0 +1,36 @@
+<link href="css/messages.css" rel="stylesheet">
+<ion-header-bar align-title="center" class="bar-stable" style="height:49px" ng-hide="choseMessagesCount<1">
+  <div class="buttons">
+	<button class="button button-icon ion-android-arrow-back" ng-click="cancelChoseMessages()"></button>
+  </div>
+  <h1 class="title title-chose-messages">{{choseMessagesCount}} messages</h1>
+  <div class="buttons">
+	<button class="button button-icon ion-ios-trash-outline" style="color:#387ef5" ng-click="deleteMessages()"></button>
+  </div>
+</ion-header-bar>
+<ion-content class="chose-messages" ng-class="{'has-footer':choseMessagesCount<1}">
+<div class="list message-index">
+	<div ng-repeat="message in messages | orderBy:'-time'" class="item item-avatar relative">
+	<input type="checkbox" id="{{message.$id}}" ng-change="choseMessage(message)" ng-model="message.selected">
+	<label for="{{message.$id}}">
+	  <img ng-if="message.avatar.$value" ng-src="{{message.avatar.$value}}">
+	  <img ng-if="!message.avatar.$value" ng-src="css/img/avatar/{{message.name.$value | firstChar}}.png">
+	  <div class="status-check bg-full"></div>
+	  <div ng-show="message.unread > 0" class="message-count">{{message.unread}}</div>
+	</label>
+	<div ui-sref="detail({id:message.$id})">
+	  <h2>{{message.name.$value}}</h2>
+	  <p>{{message.content}}</p>
+	  <p class="message-time">{{message.time | sinceTime}}</p>
+	</div>
+	</div>
+</div>
+<div ng-show="messages == ''" class="text-center">
+	<div class="margin-bottom">Send messages to friend free</div>
+	<button class="button button-small width-20 button-positive" ui-sref="createGroup">Start</button>
+</div>
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-light" ng-show="choseMessagesCount<1">
+  <button class="button button-icon ion-ios-search-strong" ui-sref="search"></button>
+  <button class="button button-icon ion-ios-chatbubble" ui-sref="createGroup"></button>
+</ion-footer-bar>

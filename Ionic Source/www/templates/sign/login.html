@@ -1,0 +1,30 @@
+<link href="css/sign.css" rel="stylesheet">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="goBack()"></button>
+  </div>
+  <h1 class="title">Login</h1>
+</ion-header-bar>
+<ion-content scroll="false" class="stable-bg" ng-controller="areacodeCtrl">
+	<div class="list login-main">
+	<div class="padding text-center login-notifi" ng-show="data.notification">
+		<span>{{data.notification}}</span>
+	</div>
+	  <a class="item item-icon-right" ng-click="showareaCode()">{{choseArea.name}} (+{{choseArea.areacode}})<i class="icon ion-ios-arrow-right"></i></a>
+	  <div class="item item-input">
+		<input type="number" ng-model="data.phone" placeholder="Enter phone number">
+		<button class="button button-clear" style="display:{{clearValue}}" ng-click="data.phone=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+	  </div>
+	  <div class="item item-input">
+		<input type="{{showValue.type}}" ng-model="data.password" placeholder="Enter password">
+		<button class="button button-clear" ng-click="data.password=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+		<button class="button button-clear" ng-click="showPassword()">{{showValue.text}}</button>
+	  </div>
+	</div>
+	<button ng-click="login()" class="button button-positive width-60 margin-auto">LOGIN</button>
+	<div class="text-center padding-vertical">
+		<a ng-click="showForgot()" class="icon-right">Forgot password ?</a>
+	</div>
+</ion-content>
