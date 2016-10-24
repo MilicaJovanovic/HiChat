@@ -57,7 +57,9 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.data.notification = "Plese enter data to continue";
 	} else if($scope.data.password != $scope.data.repassword) {
 		$scope.data.notification = "Confirmation password do not match";
-	} else {
+	} else if(!(isValidEmailAddress($scope.data.email))) { 
+      $scope.data.notification = "Please enter email address with domain";
+  } else {
 		$scope.showLoading("Loading...");
 		$scope.data.notification = false;
 		$scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
@@ -275,7 +277,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 				if(option == "text") $scope.contentBottom = '100px';
 				else $scope.contentBottom = '220px';
 			};
-			
+
 			$scope.inputText = {"from":0,"type":"text"};
 			$scope.sendText = function(){
 				if(angular.isDefined($scope.inputText.content) && angular.isString($scope.inputText.content)){
@@ -291,7 +293,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 					$scope.inputText = {"from":0,"type":"text"};
 				}
 			};
-			
+
 			$scope.inputPicture = {"from":0,"type":"picture"};
 			$scope.takePicture = function(){
 				$ionicTabsDelegate.select(1);
@@ -351,7 +353,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 					$scope.inputSticker = {"from":0,"type":"sticker"};
 				}
 			};
-			
+
 			$scope.showSendLocation = function(){
 				$state.go('sendLocation',{id:$stateParams.id});
 			};
@@ -554,7 +556,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 				$scope.callTime.second = 0;
 			}
 		}
-		$scope.autoChange = $timeout(function(){$scope.changeBackground();}, 1000);	
+		$scope.autoChange = $timeout(function(){$scope.changeBackground();}, 1000);
 	}
 	$scope.changeBackground();
 	$ionicModal.fromTemplateUrl('templates/messages/call.html', {
@@ -785,7 +787,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.settings.toage = $scope.beforeto;
 		$scope.getRangeAge();
 	};
-	
+
 	$ionicModal.fromTemplateUrl('templates/contacts/nearby-setting.html', {
     scope: $scope
 	}).then(function(modal) {
@@ -1150,7 +1152,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		if(option == "text") $scope.contentBottom = '100px';
 		else $scope.contentBottom = '220px';
 	};
-	
+
 	$scope.inputText = {"type":"text"};
 	$scope.sendText = function(){
 		if(angular.isDefined($scope.inputText.content) && angular.isString($scope.inputText.content)){
@@ -1161,7 +1163,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 			$scope.inputText = {"type":"text"};
 		}
 	};
-	
+
 	$scope.inputPicture = {"type":"picture"};
 	$scope.takePicture = function(){
 		$ionicTabsDelegate.select(1);
@@ -1211,7 +1213,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 			$scope.inputSticker = {"type":"sticker"};
 		}
 	};
-			
+
 	$scope.showSendLocation = function(){
 		$state.go('sendLocation',{id:$stateParams.id,source:'group'});
 	};
@@ -1397,7 +1399,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	$scope.warning = false;
 	if(!$scope.data.oldpassword || !$scope.data.password || !$scope.data.repassword){
 		$scope.warning = true;
-	} else {	
+	} else {
 		if($scope.data.password != $scope.data.repassword) $scope.showPopupError();
 		else {
 			$scope.User = Login().get($localStorage.userLogin.phone);
@@ -1511,5 +1513,10 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		]
 	});
 	IonicClosePopupService.register(confirmPopup);
-	};
+};
 })
+
+function isValidEmailAddress(emailAddress) {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(emailAddress);
+};

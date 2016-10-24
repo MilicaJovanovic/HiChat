@@ -11,7 +11,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
     }
-	navigator.splashscreen.hide();
+	// navigator.splashscreen.hide();
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
