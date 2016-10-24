@@ -146,6 +146,17 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
       }
     })
 
+	.state('tab.admin', {
+	  cache: false,
+      url: '/admin',
+      views: {
+        'tab-admin': {
+          templateUrl: 'templates/admin/admin.html',
+          controller: 'adminCtrl'
+        }
+      }
+    })
+
   .state('tab.recommended', {
       url: '/contacts/recommended',
       views: {
