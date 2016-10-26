@@ -1,3 +1,4 @@
+var domain = "dusannesicdevelopment.sytes.net";
 angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('areacodeCtrl', function($scope, $ionicModal, Areacode){
@@ -33,10 +34,11 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
 		$scope.userLogin = Login().get($scope.data.fullPhone);
 		$scope.userLogin.$loaded(function(){
+			console.log($scope.userLogin);
 			$scope.hideLoading();
-			if(angular.isDefined($scope.userLogin.active)){
-				$scope.data.notification = "Your account is inactive, please active mail for register";
-			} else {
+			// if(angular.isDefined($scope.userLogin.active)){
+			// 	$scope.data.notification = "Your account is inactive, please active mail for register";
+			// } else {
 				if($scope.userLogin.password == $scope.data.password) {
 					$localStorage.userLogin = {};
 					$localStorage.userLogin.isLogin = true;
@@ -44,11 +46,15 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 					$localStorage.userLogin.phone = $scope.userLogin.$id;
 					$localStorage.userLogin.password = $scope.data.password;
 					$localStorage.userLogin.areacode = Number($scope.choseArea.areacode);
-					$state.go("tab.messages");
+					if ($scope.userLogin.role == "admin") {
+						$state.go("tab.admin");
+					} else {
+						$state.go("tab.messages");
+					}
 				} else {
 					$scope.data.notification = "The password you entered is incorrect";
 				}
-			}
+			// }
 		});
 	}
   };
@@ -151,6 +157,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		} else {
 			$scope.data.birthday = $filter('date')($scope.data.birthday,'dd/MM/yyyy');
 			$scope.data.phone = $localStorage.userLogin.phone;
+			$scope.data.role = 'normal';
 			User($localStorage.userLogin.id).set($scope.data);
 			$state.go('tab.messages');
 		}
@@ -1376,6 +1383,12 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	};
 })
 
+.controller('adminCtrl', function($scope, $ionicModal, Test) {
+	console.log('radi');
+	$scope.results = Test;
+	console.log($scope.results);
+})
+
 .controller('changePasswordCtrl', function($scope, $ionicPopup, $state, $localStorage, Login){
   $scope.data = {};
   $scope.warning = false;
@@ -1517,6 +1530,11 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 })
 
 function isValidEmailAddress(emailAddress) {
-    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
-    return pattern.test(emailAddress);
+	var emailParams = emailAddress.split("@");
+
+	if (emailParams[1] === domain) {
+		return true;
+	}
+
+	return false;
 };

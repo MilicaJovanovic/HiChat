@@ -1,0 +1,371 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Full Ionic Application for Messaging Mobile App - chat with friends anywhere</title>
+	
+	<meta name="description" content="Fully functional version of the application Hichat">
+	<meta name="author" content="TaydoTech">
+	<meta name="copyright" content="TaydoTech">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2016-09-02T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-full-ionic-application-for-messaging-mobile-app">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#install" title="Install">Install</a></li>
+			<li><a href="#config" title="Config">Config</a></li>
+			<li><a href="#customization" title="Customization">Customization</a></li>
+			<li><a href="#build" title="Build">Build</a></li>
+			<li><a href="#sign_application" title="Sign Application">Sign Application</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright TaydoTech 2016<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Full Ionic Application for Messaging Mobile App</h1>
+	<h2>chat with friends anywhere</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 19/08/2016</li>
+	<li>latest update: 09/02/2016</li>
+	<li>by: TaydoTech</li>
+	<li><a href=""></a></li>
+	<li>email: <a href="mailto:&#105;&#111;&#110;&#105;&#99;&#64;&#116;&#97;&#121;&#100;&#111;&#116;&#101;&#99;&#104;&#46;&#99;&#111;&#109;">&#105;&#111;&#110;&#105;&#99;&#64;&#116;&#97;&#121;&#100;&#111;&#116;&#101;&#99;&#104;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="install">
+	<div class="page-header"><h3>Install</h3><hr class="notop"></div>
+<h2>
+	To install Hichat you need:&nbsp;</h2>
+<p>
+	-&nbsp;<a href="https://nodejs.org/en/">NodeJS</a></p>
+<p>
+	-&nbsp;<a href="http://ionicframework.com/">Ionic Framework</a></p>
+<h2>
+	Once you&#39;ve installed, create a new project ionic:</h2>
+<pre style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; color: rgb(51, 51, 51); border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background: rgb(240, 243, 248);">
+<code class="language-bash" data-lang="bash" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>ionic start Hichat blank</code></pre>
+<p>
+	<img alt="" src="assets/images/image_2.png" style="width: 100%; height: 100%;"></p>
+<p>
+	After creating the project, unzip all the files in Hichat.zip&nbsp;to a folder project, in this example is E:/Hichat&nbsp;(make sure you overwrite all)</p>
+<p>
+	<img alt="" src="assets/images/image_9.png" style="width: 100%; height: 100%;"></p>
+</section>
+<section id="config">
+	<div class="page-header"><h3>Config</h3><hr class="notop"></div>
+<h3>
+	<span style="font-size: 12px;">The first config Firebase Console:</span></h3>
+<h3>
+	- Go to&nbsp;<a href="https://console.firebase.google.com/">Firebase Console</a>, login your Google Account to Create new project</h3>
+<p>	<img alt="" src="assets/images/image_24.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	- Input infomation and click CREATE PROJECT</h3>
+<p>	<img alt="" src="assets/images/image_28.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	After create, click project to Dashboard</h3>
+<p>	<img alt="" src="assets/images/image_7.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	Click &quot;Add Firebase to your web app&quot; to get the code config</h3>
+<p>	<img alt="" src="assets/images/image_12.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	- Copy the code and Replace old config in /www/index.html</h3>
+<p>	<img alt="" src="assets/images/image_3.png" style="width: 100%; height: 100%;"></p>
+<p>	<img alt="" src="assets/images/image_10.png" style="width: 100%; height: 100%;"></p>
+<p>	&nbsp;</p>
+<h3>
+	Now, close modal to import data areacode. Click &quot;Database&quot; open Database page, click &quot;+&quot; add new data</h3>
+<p>	<img alt="" src="assets/images/image_20.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	Input infomation, name is &quot;areacode&quot; is require, click to Add button</h3>
+<p>	<img alt="" src="assets/images/image_27.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	After add &quot;areacode&quot; to database, click open this, click Menu and Import JSON</h3>
+<p>	<img alt="" src="assets/images/image_16.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	Browser to areacode.json on zip file and click IMPORT</h3>
+<p>	<img alt="" src="assets/images/image_1.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	Success, you will see list areacode</h3>
+<p>	<img alt="" src="assets/images/image_22.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	The last, accept rules firebase. Click tab Rules, change with:</h3>
+<pre style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; color: rgb(51, 51, 51); border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background: rgb(240, 243, 248);">
+</pre>
+<div>
+	{</div>
+<div>
+	&nbsp; &quot;rules&quot;: {</div>
+<div>
+	&nbsp; &nbsp; &quot;.read&quot;: &quot;true&quot;,</div>
+<div>
+	&nbsp; &nbsp; &quot;.write&quot;: &quot;true&quot;,</div>
+<div>
+	&nbsp; &nbsp; &quot;location&quot;:{</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &quot;.indexOn&quot;: &quot;nearby&quot;</div>
+<div>
+	&nbsp; &nbsp; },</div>
+<div>
+	&nbsp; &nbsp; &quot;login&quot;:{</div>
+<div>
+	&nbsp; &nbsp; &nbsp; &quot;.indexOn&quot;: &quot;email/value&quot;</div>
+<div>
+	&nbsp; &nbsp; }</div>
+<div>
+	&nbsp; }</div>
+<div>
+	}</div>
+<h2>
+	<img alt="" src="assets/images/image_6.png" style="width: 100%; height: 100%;"></h2>
+<p>	&nbsp;</p>
+<h2>
+	The second, config mail php to active account</h2>
+<h3>
+	Upload active.php (in zip file) to your host and change url config in active.php</h3>
+<p>	$firebase is url to root of your firebase.</p>
+<p>	$host is url to file active.php in your host.</p>
+<p>	<img alt="" src="assets/images/image_11.png" style="width: 100%; height: 100%;"></p>
+<h3>
+	Now, change $rootScope.hostMail in /www/js/app.js is url to file active.php in your host</h3>
+<p>	<img alt="" src="assets/images/image_5.png" style="width: 100%; height: 100%;"></p>
+<p>	&nbsp;</p>
+<h2>
+	The third, create new Google API and get the API Key.</h2>
+<p>	- Go to&nbsp;<a href="https://console.developers.google.com/apis/">Google API</a>, login your Google Account, create new project</p>
+<p>	<img alt="" src="assets/images/image_14.png" style="width: 100%; height: 100%;"></p>
+<p>	Input infomation and click Create</p>
+<p>	<img alt="" src="assets/images/image_26.png" style="width: 100%; height: 100%;"></p>
+<p>	<strong>Wait for working, when success&nbsp;</strong>click Credentials to create new API key</p>
+<p>	<img alt="" src="assets/images/image_8.png" style="width: 100%; height: 100%;"></p>
+<p>	Input infomation and click Create</p>
+<p>	<img alt="" src="assets/images/image_4.png" style="width: 100%; height: 100%;"></p>
+<p>	When success, copy your API key to config.</p>
+<p>	<img alt="" src="assets/images/image_19.png" style="width: 100%; height: 100%;"></p>
+<p>	&nbsp;</p>
+<p>	Now open /www/index.html, find and replace Google API Key with your key</p>
+<p>	<img alt="" src="assets/images/image_23.png" style="width: 100%; height: 100%;"></p>
+<p>	Config your API Key in /www/js/app.js</p>
+<p>	<img alt="" src="assets/images/image_17.png" style="width: 100%; height: 100%;"></p>
+<p>	<strong>The last,&nbsp;</strong>Enbled API for Hichat work in Google API. It is Google Maps Javascript API, Google Places API Webservice and Google Maps Geocoding API</p>
+<p>	<img alt="" src="assets/images/image_13.png" style="width: 100%; height: 100%;"></p>
+<p>	<img alt="" src="assets/images/image_15.png" style="width: 100%; height: 100%;"></p>
+<h2>
+	Config link download application to send sms invite</h2>
+<p>	Open /www/app.js edit $rootScope is link download off application to use feature invite friend with SMS</p>
+<p>	<img alt="" src="assets/images/image_21.png" style="width: 100%; height: 100%;"></p>
+</section>
+<section id="customization">
+	<div class="page-header"><h3>Customization</h3><hr class="notop"></div>
+<h1>
+	Config application</h1>
+<p>	- You can change config application before build, like name of application, version, description, author,...</p>
+<p>	Open and edit in /config.xml</p>
+<p>	<img alt="" src="assets/images/image_18.png" style="width: 100%; height: 100%;"></p>
+<h1>
+	Change Logo and Launcher</h1>
+<p>	To change Logo and Launcher, change images on /resources</p>
+<p>	/android for application Android</p>
+<p>	/ios for application Ios</p>
+<p>	<img alt="" src="assets/images/image_25.png" style="width: 100%; height: 100%;"></p>
+<p>	Make sure you overwrite and don&#39;t&nbsp;&nbsp;change the name, image file size.</p>
+</section>
+<section id="build">
+	<div class="page-header"><h3>Build</h3><hr class="notop"></div>
+<h3 style="box-sizing: border-box; font-family: Raleway, Helvetica, Arial, sans-serif; line-height: 1.1; color: rgb(44, 113, 133); margin-top: 20px; margin-bottom: 10px; font-size: 22px;">
+	Java Development Kit (JDK)</h3>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	Install&nbsp;<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html"><font color="#3992ab"><span style="box-sizing: border-box;">Java Development Kit (JDK) 7</span></font></a>&nbsp;or later.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	When installing on Windows you also need to set&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">JAVA_HOME</code>&nbsp;Environment Variable according to your JDK installation path (see&nbsp;<a href="http://cordova.apache.org/docs/en/6.x/guide/platforms/android/index.html#setting-environment-variables" style="box-sizing: border-box; color: rgb(57, 146, 171); text-decoration: none; background-color: transparent;">Setting Environment Variables</a>)</p>
+<h4 id="build_android_sdk">Android SDK</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	Install the&nbsp;<a href="http://developer.android.com/sdk/installing/index.html?pkg=tools" style="box-sizing: border-box; color: rgb(57, 146, 171); text-decoration: none; background-color: transparent;">Android Stand-alone SDK Tools</a>&nbsp;or&nbsp;<a href="http://developer.android.com/sdk/installing/index.html?pkg=studio" style="box-sizing: border-box; color: rgb(57, 146, 171); text-decoration: none; background-color: transparent;">Android Studio</a>. Proceed with Android Studio if you plan on developing new Cordova for Android plugins or using native tools to run and debug the Android platform. Otherwise, the Android Stand-alone SDK Tools are enough to build and deploy Android applications.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	Detailed installation instructions are available as part of installation links above.</p>
+<h4 id="build_adding_sdk_packages">Adding SDK Packages</h4>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	After installing the Android SDK, you must also install the packages for whatever&nbsp;<a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels" style="box-sizing: border-box; color: rgb(57, 146, 171); text-decoration: none; background-color: transparent;">API level</a>&nbsp;you wish to target. It is recommended that you install the highest SDK version that your version of cordova-android supports (see above).</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	Open Android SDK Manager (for example, run&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">android</code>&nbsp;from the terminal) and make sure the following are installed:</p>
+<ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	<li style="box-sizing: border-box;">
+		Android Platform SDK for your targeted version of Android</li>
+	<li style="box-sizing: border-box;">
+		Android SDK build-tools version 19.1.0 or higher</li>
+	<li style="box-sizing: border-box;">
+		Android Support Repository (found under &quot;Extras&quot;)</li>
+</ol>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	See Android&#39;s documentation on&nbsp;<a href="http://developer.android.com/sdk/installing/adding-packages.html" style="box-sizing: border-box; color: rgb(57, 146, 171); text-decoration: none; background-color: transparent;">Installing SDK Packages</a>&nbsp;for more details.</p>
+<h3 style="box-sizing: border-box; font-family: Raleway, Helvetica, Arial, sans-serif; line-height: 1.1; color: rgb(44, 113, 133); margin-top: 20px; margin-bottom: 10px; font-size: 22px;">
+	Setting environment variables</h3>
+<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	Cordova&#39;s CLI tools require some environment variables to be set in order to function correctly. The CLI will attempt to set these variables for you, but in certain cases you may need to set them manually. The following variables should be updated:</p>
+<ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Raleway, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">
+	<li style="box-sizing: border-box;">
+		Set the&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">JAVA_HOME</code>&nbsp;environment variable to the location of your JDK installation</li>
+	<li style="box-sizing: border-box;">
+		Set the&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">ANDROID_HOME</code>&nbsp;environment variable to the location of your Android SDK installation</li>
+	<li style="box-sizing: border-box;">
+		It is also recommended that you add the Android SDK&#39;s&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">tools</code>&nbsp;and&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">platform-tools</code>&nbsp;directories to your&nbsp;<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px; padding: 2px 4px; color: rgb(0, 0, 0); border-radius: 4px; background-color: rgb(201, 221, 223);">PATH</code></li>
+</ol>
+<h4 id="build__nbsp">&nbsp;</h4>
+<h3 style="box-sizing: border-box; font-family: Raleway, Helvetica, Arial, sans-serif; line-height: 1.1; color: rgb(44, 113, 133); margin-top: 20px; margin-bottom: 10px; font-size: 22px;">
+	Add Platform</h3>
+<p>	Move to folder of project Hichat</p>
+<pre style="border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); line-height: 1.42857; box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; word-break: break-all; word-wrap: break-word; color: rgb(51, 51, 51); border-radius: 2px; background: rgb(240, 243, 248);">
+<code class="language-bash" data-lang="bash" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>cd Hichat
+</code></pre>
+<pre style="border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); line-height: 1.42857; box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; word-break: break-all; word-wrap: break-word; color: rgb(51, 51, 51); border-radius: 2px; background: rgb(240, 243, 248);">
+<code class="language-bash" data-lang="bash" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ ionic platform add android</span>
+</code></pre>
+<p>	After add platform success, you can edit config, icon, splashscreen,... in /platforms/android</p>
+<h3 style="box-sizing: border-box; font-family: Raleway, Helvetica, Arial, sans-serif; line-height: 1.1; color: rgb(44, 113, 133); margin-top: 20px; margin-bottom: 10px; font-size: 22px;">
+	Build to APK</h3>
+<p>	Now, you can build to run in device</p>
+<pre style="border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); line-height: 1.42857; box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; word-break: break-all; word-wrap: break-word; color: rgb(51, 51, 51); border-radius: 2px; background: rgb(240, 243, 248);">
+<code class="language-bash" data-lang="bash" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ ionic build android</span></code></pre>
+<p>	&nbsp;</p>
+<p>	When success, file apk will in /platforms/android/build/outputs/apk with name &quot;android-debug.apk&quot;</p>
+<p>	&nbsp;</p>
+<h1>
+	<strong><a href="http://cordova.apache.org/docs/en/6.x/guide/platforms/android/index.html#page-toc-source">Read detail guide</a></strong></h1>
+</section>
+<section id="sign_application">
+	<div class="page-header"><h3>Sign Application</h3><hr class="notop"></div>
+<h1 id="android-publishing" style="box-sizing: border-box; font-size: 32px; margin: 40px 0px 15px; font-family: AvenirNextLTPro-Regular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.1; padding-bottom: 10px; color: rgb(51, 51, 51);">
+	Android Publishing</h1>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	To generate a release build for Android, we can use the following cordova cli command:</p>
+<div class="language-bash highlighter-rouge" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<pre class="highlight" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">
+<code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>cordova build --release android
+</code></pre>
+</div>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	This will generate a release build based on the settings in your&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">config.xml</code>. Your Ionic app will have preset default values in this file, but if you need to customize how your app is built, you can edit this file to fit your preferences. Check out&nbsp;<a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/config.html" style="box-sizing: border-box; color: rgb(79, 142, 247); text-decoration: none; opacity: 0.8; transition: opacity 0.1s ease-in-out, border-color;">the config.xml file</a>documentation for more information.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Next, we can find our&nbsp;<em style="box-sizing: border-box;">unsigned</em>&nbsp;APK file in&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">platforms/android/build/outputs/apk</code>. In our example, the file was<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">platforms/android/build/outputs/apk/HelloWorld-release-unsigned.apk</code>. Now, we need to sign the unsigned APK and run an alignment utility on it to optimize it and prepare it for the app store. If you already have a signing key, skip these steps and use that one instead.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Let&rsquo;s generate our private key using the&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">keytool</code>&nbsp;command that comes with the JDK. If this tool isn&rsquo;t found, refer to the&nbsp;<a href="http://ionicframework.com/docs/guide/installation.html" style="box-sizing: border-box; color: rgb(79, 142, 247); text-decoration: none; opacity: 0.8; transition: opacity 0.1s ease-in-out, border-color;">installation guide</a>:</p>
+<div class="language-bash highlighter-rouge" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<pre class="highlight" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">
+<code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+</code></pre>
+</div>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	You&rsquo;ll first be prompted to create a password for the keystore. Then, answer the rest of the nice tools&rsquo;s questions and when it&rsquo;s all done, you should have a file called&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">my-release-key.keystore</code>&nbsp;created in the current directory.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<strong style="box-sizing: border-box;">Note</strong>: Make sure to save this file somewhere safe, if you lose it you won&rsquo;t be able to submit updates to your app!</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	To sign the unsigned APK, run the&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">jarsigner</code>&nbsp;tool which is also included in the JDK:</p>
+<div class="language-bash highlighter-rouge" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<pre class="highlight" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">
+<code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
+</code></pre>
+</div>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	This signs the apk in place. Finally, we need to run the zip align tool to optimize the APK. The&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">zipalign</code>&nbsp;tool can be found in<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">/path/to/Android/sdk/build-tools/VERSION/zipalign</code>. For example, on OS X with Android Studio installed,&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">zipalign</code>&nbsp;is in<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">~/Library/Android/sdk/build-tools/VERSION/zipalign</code>:</p>
+<div class="language-bash highlighter-rouge" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<pre class="highlight" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; white-space: pre-wrap; padding: 10px; margin-top: 0px; margin-bottom: 10.5px; line-height: 1.42857; word-break: break-all; word-wrap: break-word; border-width: 0px 0px 0px 4px; border-left-color: rgb(215, 219, 228); border-radius: 2px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">
+<code style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; margin-left: 3px; margin-right: 3px; padding: 0px; color: inherit; border-radius: 2px; border: 0px; background-color: transparent;"><span class="gp" style="box-sizing: border-box; color: rgb(85, 85, 85);">$ </span>zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+</code></pre>
+</div>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Now we have our final release binary called&nbsp;<code class="highlighter-rouge" style="box-sizing: border-box; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.75px; margin-left: 3px; margin-right: 3px; padding: 2px 4px; color: rgb(77, 140, 244); white-space: nowrap; border-radius: 2px; background-color: whitesmoke;">HelloWorld.apk</code>&nbsp;and we can release this on the Google Play Store for all the world to enjoy!</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<small style="box-sizing: border-box; font-size: 12.75px;"><i style="box-sizing: border-box;">(There are a few other ways to sign APKs. Refer to the official&nbsp;<a href="http://developer.android.com/tools/publishing/app-signing.html" style="box-sizing: border-box; color: rgb(79, 142, 247); text-decoration: none; opacity: 0.8; transition: opacity 0.1s ease-in-out, border-color;">Android App Signing</a>&nbsp;documentation for more information.)</i></small></p>
+<h2 id="google-play-store" style="box-sizing: border-box; font-family: AvenirNextLTPro-Regular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.1; margin: 35px 0px 10px; font-size: 26px; color: rgb(51, 51, 51);">
+	Google Play Store</h2>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Now that we have our release APK ready for the Google Play Store, we can create a Play Store listing and upload our APK.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	To start, you&rsquo;ll need to visit the&nbsp;<a href="https://play.google.com/apps/publish/" style="box-sizing: border-box; color: rgb(79, 142, 247); text-decoration: none; opacity: 0.8; transition: opacity 0.1s ease-in-out, border-color;">Google Play Store Developer Console</a>&nbsp;and create a new developer account. Unfortunately, this is not free. However, the cost is only $25 compared to Apple&rsquo;s $99.</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Once you have a developer account, you can go ahead and click &ldquo;Publish an Android App on Google Play&rdquo; as in the screenshot below:</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<img alt="New google play app" src="assets/images/image_29.png" style="box-sizing: border-box; border: 0px; vertical-align: middle;"></p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	Then, you can go ahead and click the button to edit the store listing (We will upload an APK later). You&rsquo;ll want to fill out the description for the app. Here is a little preview from when we filled out the application with the Ionic Todo app:</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<img alt="Ionic Todo" src="assets/images/image_30.png" style="box-sizing: border-box; border: 0px; vertical-align: middle;"></p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	When you are ready, upload the APK for the release build and publish the listing. Be patient and your hard work should be live in the wild!</p>
+<p style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	&nbsp;</p>
+<h1 style="box-sizing: border-box; margin: 0px 0px 10.5px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 15px; line-height: 21.4285px;">
+	<strong><a href="http://ionicframework.com/docs/guide/publishing.html">Read detail guide</a></strong></h1>
+</section>
+
+	</div>
+</body>
+</html>

@@ -1,8 +1,8 @@
 angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', 'ngStorage'])
 
 .run(function($ionicPlatform, $rootScope, $ionicPopup, $ionicHistory, $ionicLoading, $localStorage, $location, $filter, Location, $state) {
-	$rootScope.hostMail = 'https://taydomailer.com/mobileapp/hichat/active.php';
-	$rootScope.keyMap = 'AIzaSyBkoCe6SWsU-TY313QWkK6zc1KntCoubLc';
+	$rootScope.hostMail = 'http://dusannesicdevelopment.sytes.net/hichat/active.php';
+	$rootScope.keyMap = 'AIzaSyAcrBFpjkE7Zt8M0mqdpGdAl8CgSTd4yLA';
 	$rootScope.getMap = 'https://maps.googleapis.com/maps/api/staticmap?key='+$rootScope.keyMap+'&';
 	$rootScope.linkDownload = 'http://hichatapp.com/dl?c=1234fmiakqua';
 	$rootScope.inviteText = 'Invited you to install Hichat, the free texting application: '+$rootScope.linkDownload;

@@ -1,5 +1,5 @@
 <link href="css/contacts.css" rel="stylesheet">
-<ion-view title="List of Users" hide-tabs="true">
+<ion-view title="List of Users" hide-tabs="false">
 <ion-header-bar align-title="left" class="bar-positive">
   <div class="buttons">
     <button class="button button-icon ion-android-arrow-back" ng-click="goBack()"></button>
@@ -7,7 +7,7 @@
   <h1 class="title">List of users</h1>
 </ion-header-bar>
  <ion-content scroll="false" ng-controller="areacodeCtrl">
-	<table>
+	<!-- <table>
 	  <thead>
 	    <tr>
 	      <td>Username</td>
@@ -18,6 +18,11 @@
         </td>
 	    </tr>
 	  </thead>
-	</table>
+	</table> -->
+  <ul class="list no-margin" ng-repeat="result in results">
+    <div ng-repeat="list in results.value | filter:search">
+      <div>{{result.phone}}</div>
+    </div>
+  </ul>
  </ion-content>
 </ion-view>

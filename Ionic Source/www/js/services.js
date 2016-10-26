@@ -5,6 +5,11 @@ angular.module('starter.services', ['firebase'])
 	return $firebaseArray(item);
 })
 
+.factory("Test", function($firebaseArray) {
+	var item = firebase.database().ref('user');
+	return $firebaseArray(item);
+})
+
 .factory("Login", function($firebaseObject) {
 	return function(){
 		var item = firebase.database().ref('login');
@@ -28,6 +33,7 @@ angular.module('starter.services', ['firebase'])
 					userID = maxID.$value +1;
 					var user = firebase.database().ref('login').child(phone);
 					user.child('id').set(userID);
+					user.child('role').set('normal');
 					item.set(userID);
 				});
 			},
