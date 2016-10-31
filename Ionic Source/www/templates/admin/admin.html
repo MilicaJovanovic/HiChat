@@ -7,22 +7,7 @@
   <h1 class="title">List of users</h1>
 </ion-header-bar>
  <ion-content scroll="false" ng-controller="areacodeCtrl">
-	<!-- <table>
-	  <thead>
-	    <tr>
-	      <td>Username</td>
-        <td>Number</td>
-        <td>Email</td>
-        <td>
-          <button type="button" name="button">Change permission</button>
-        </td>
-	    </tr>
-	  </thead>
-	</table> -->
-  <ul class="list no-margin" ng-repeat="result in results">
-    <div ng-repeat="list in results.value | filter:search">
-      <div>{{result.phone}}</div>
-    </div>
-  </ul>
+	<h2 style="width: 100%; text-align: center;">List of normal users:</h2>
+  <div style="width: 100%; height: 100%;" id="list"></div>
  </ion-content>
 </ion-view>

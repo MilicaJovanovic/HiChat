@@ -34,7 +34,6 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
 		$scope.userLogin = Login().get($scope.data.fullPhone);
 		$scope.userLogin.$loaded(function(){
-			console.log($scope.userLogin);
 			$scope.hideLoading();
 			// if(angular.isDefined($scope.userLogin.active)){
 			// 	$scope.data.notification = "Your account is inactive, please active mail for register";
@@ -1383,10 +1382,26 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	};
 })
 
-.controller('adminCtrl', function($scope, $ionicModal, Test) {
-	console.log('radi');
-	$scope.results = Test;
-	console.log($scope.results);
+.controller('adminCtrl', function($scope, $ionicModal, $firebase, $firebaseArray) {
+	var result = firebase.database().ref('user');
+	result.on('value', card => {
+		let rawList = [];
+		card.forEach( snap => {
+			rawList.push({
+				id: snap.key,
+				name: snap.val().name,
+				phone: snap.val().phone,
+				role: snap.val().role
+			});
+		});
+		for (var i = 0; i < rawList.length; i++) {
+			if (rawList[i].role === 'normal') {
+				var table = document.getElementById('list');
+				var newElement = '<div>' + rawList[i].name + '</div><div>' + rawList[i].phone + '</div><div>Edit</div>';
+				table.innerHTML = table.innerHTML + newElement;
+			}
+		}
+	});
 })
 
 .controller('changePasswordCtrl', function($scope, $ionicPopup, $state, $localStorage, Login){
