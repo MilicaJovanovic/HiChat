@@ -86,6 +86,9 @@ angular.module('starter.services', ['firebase'])
 				var filter = firebase.database().ref('user');
 				if(gender != 'All') filter = filter.orderByChild('gender').equalTo(gender);
 				return $firebaseArray(filter);
+			},
+			changeRole: function(name, role) {
+				item.child(name+'/role').set(role);
 			}
 		}
 	}

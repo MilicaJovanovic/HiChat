@@ -1,3 +1,9 @@
+function gotochange(name, phone) {
+	localStorage.setItem('name', name);
+	localStorage.setItem('phone', phone);
+	window.location = "#/changeRole";
+}
+
 var domain = "dusannesicdevelopment.sytes.net";
 angular.module('starter.controllers', ['ionic.closePopup'])
 
@@ -1397,7 +1403,9 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		for (var i = 0; i < rawList.length; i++) {
 			if (rawList[i].role === 'normal') {
 				var table = document.getElementById('list');
-				var newElement = '<div>' + rawList[i].name + '</div><div>' + rawList[i].phone + '</div><div>Edit</div>';
+				var name = "'" + rawList[i].name + "'";
+				var phone = "'" + rawList[i].phone + "'";
+				var newElement = '<div>' + rawList[i].name + '</div><div>' + rawList[i].phone + '</div><div>Edit</div><div onclick="gotochange(' + name + ', ' + phone + ')">Change Role</div>';
 				table.innerHTML = table.innerHTML + newElement;
 			}
 		}
@@ -1454,6 +1462,20 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		]
 	   });
 	};
+})
+
+.controller('ChangeRoleCtrl', function($scope, $ionicModal, $firebase, $firebaseArray, User) {
+	$scope.username = localStorage.getItem('name');
+	$scope.phone = localStorage.getItem('phone');
+	$scope.goBack = function() {
+		window.location = "#/tab/admin";
+	}
+	$scope.updateRole = function() {
+		var e = document.getElementById("roleSelect");
+		var newRole = e.options[e.selectedIndex].value;
+
+		User().changeRole($scope.username, newRole);
+	}
 })
 
 .controller('searchCtrl', function($scope, $state, $localStorage, $ionicPopup, IonicClosePopupService, Contacts, User, Block){

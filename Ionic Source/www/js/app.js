@@ -334,6 +334,12 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 	  controller: 'searchCtrl'
     })
 
+  .state('changeRole', {
+    cache: false,
+    url: '/changeRole',
+    templateUrl: 'templates/admin/changeRole.html',
+    controller: 'ChangeRoleCtrl'
+  })
   ;
 
   $urlRouterProvider.otherwise('/tab/messages');
