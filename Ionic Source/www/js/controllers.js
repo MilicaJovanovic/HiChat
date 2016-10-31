@@ -62,7 +62,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.data.notification = "Plese enter data to continue";
 	} else if($scope.data.password != $scope.data.repassword) {
 		$scope.data.notification = "Confirmation password do not match";
-	} else if(!(isValidEmailAddress($scope.data.email))) { 
+	} else if(!(isValidEmailAddress($scope.data.email))) {
       $scope.data.notification = "Please enter email address with domain";
   } else {
 		$scope.showLoading("Loading...");
@@ -1397,7 +1397,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		for (var i = 0; i < rawList.length; i++) {
 			if (rawList[i].role === 'normal') {
 				var table = document.getElementById('list');
-				var newElement = '<div>' + rawList[i].name + '</div><div>' + rawList[i].phone + '</div><div>Edit</div>';
+				var newElement = '<div class="eachItem"><div class="listInfo">' + rawList[i].name + '</div><div class="listInfo">' + rawList[i].phone + '</div><div class="listEdit">Edit</div></div>';
 				table.innerHTML = table.innerHTML + newElement;
 			}
 		}
