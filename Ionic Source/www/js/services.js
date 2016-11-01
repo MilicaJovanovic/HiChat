@@ -39,6 +39,23 @@ angular.module('starter.services', ['firebase'])
 			},
 			changePass: function(phone,pass){
 				item.child(phone+'/password').set(pass);
+			},
+			changeRole: function(key, role){
+				item.child(key+'/role').set(role);
+			}
+		}
+	}
+})
+
+.factory("Users", function($firebaseArray) {
+	return function(){
+		var item = firebase.database().ref('user');
+		return {
+			get: function() {
+				return $firebaseArray(item);
+			},
+			changeRole: function(name, role) {
+				item.child(name+'/role').set(role);
 			}
 		}
 	}

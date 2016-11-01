@@ -1,6 +1,12 @@
-function gotochange(name, phone) {
+function gotochange(name, phone, id) {
+
+	console.log(name);
+	console.log(phone);
+	console.log(id);
+
 	localStorage.setItem('name', name);
 	localStorage.setItem('phone', phone);
+	localStorage.setItem('id', id);
 	window.location = "#/changeRole";
 }
 
@@ -1390,6 +1396,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('adminCtrl', function($scope, $ionicModal, $firebase, $firebaseArray) {
 	var result = firebase.database().ref('user');
+	console.log(result);
 	result.on('value', card => {
 		let rawList = [];
 		card.forEach( snap => {
@@ -1405,7 +1412,8 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 				var table = document.getElementById('list');
 				var name = "'" + rawList[i].name + "'";
 				var phone = "'" + rawList[i].phone + "'";
-				var newElement = '<div class="eachItem"><div class="listInfo">' + rawList[i].name + '</div><div class="listInfo">' + rawList[i].phone + '</div><div class="listEdit" onclick="gotochange(' + name + ', ' + phone + ')">Edit</div></div>';
+				var id = "'" + rawList[i].id + "'"
+				var newElement = '<div class="eachItem"><div class="listInfo">' + rawList[i].name + '</div><div class="listInfo">' + rawList[i].phone + '</div><div class="listEdit" onclick="gotochange(' + name + ', ' + phone + ', ' + id + ')">Edit</div></div>';
 				table.innerHTML = table.innerHTML + newElement;
 			}
 		}
@@ -1464,9 +1472,10 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	};
 })
 
-.controller('ChangeRoleCtrl', function($scope, $ionicModal, $firebase, $firebaseArray, User) {
+.controller('ChangeRoleCtrl', function($scope, $ionicModal, $firebase, $firebaseArray, Users, Login) {
 	$scope.username = localStorage.getItem('name');
 	$scope.phone = localStorage.getItem('phone');
+	$scope.key = localStorage.getItem('id');
 	$scope.goBack = function() {
 		window.location = "#/tab/admin";
 	}
@@ -1474,7 +1483,8 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		var e = document.getElementById("roleSelect");
 		var newRole = e.options[e.selectedIndex].value;
 
-		User().changeRole($scope.username, newRole);
+		Users().changeRole($scope.key, newRole);
+		Login().changeRole($scope.phone, newRole);
 	}
 })
 
