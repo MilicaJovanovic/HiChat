@@ -10,7 +10,7 @@ function gotochange(name, phone, id) {
 	window.location = "#/changeRole";
 }
 
-var domain = "dusannesicdevelopment.sytes.net";
+var domain = "rebrand.im";
 angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('areacodeCtrl', function($scope, $ionicModal, Areacode){
