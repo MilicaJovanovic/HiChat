@@ -58,8 +58,10 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 					$localStorage.userLogin.password = $scope.data.password;
 					$localStorage.userLogin.areacode = Number($scope.choseArea.areacode);
 					if ($scope.userLogin.role == "admin") {
+						$localStorage.role = "admin";
 						$state.go("tab.admin");
 					} else {
+						$localStorage.role = "normal";
 						$state.go("tab.messages");
 					}
 				} else {
@@ -176,6 +178,11 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 })
 
 .controller('tabCtrl', function($scope, $localStorage, Notification){
+	if ($localStorage.role === "normal") {
+		$scope.showTab = true;
+	} else {
+		$scope.showTab = false;
+	}
 	$scope.notification = Notification($localStorage.userLogin.id).get();
 })
 
