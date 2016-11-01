@@ -26,3 +26,35 @@
   font-size: 18px;
   color: #484B4D;
 }
+.userInfoTitle {
+  text-align: left;
+  color: #387EF5;
+	text-transform:uppercase;
+  font-size: 18px;
+  margin-top: 20px !important;
+  margin-left: 10px;
+}
+.userInfoData {
+  text-align: left;
+  color: #757C80;
+	text-transform:uppercase;
+  font-size: 18px;
+  margin-top: 20px !important;
+  margin-left: 10px;
+}
+#roleSelect {
+  width: 94%;
+  margin-left: 10px;
+  height: 40px;
+  color: #757C80;
+}
+#btnSave {
+  background-color: #387EF5;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+}
