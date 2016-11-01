@@ -35,7 +35,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('signCtrl', function($scope, $state, $http, $ionicPopup, Login, User, Camera, $filter, $localStorage){
 	$scope.data = {};
-	$scope.choseArea = {name:"United States","areacode":"1"};
+	$scope.choseArea = {name:"United Kingdom","areacode":"44"};
 	$scope.showValue = {"type":"password","text":"Show"};
 	$scope.login = function(){
 	if(!angular.isDefined($scope.data.phone)){
@@ -77,7 +77,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	} else if($scope.data.password != $scope.data.repassword) {
 		$scope.data.notification = "Confirmation password do not match";
 	} else if(!(isValidEmailAddress($scope.data.email))) {
-      $scope.data.notification = "Please enter email address with domain";
+      $scope.data.notification = "Please enter a rebrand.im valid email address";
   } else {
 		$scope.showLoading("Loading...");
 		$scope.data.notification = false;

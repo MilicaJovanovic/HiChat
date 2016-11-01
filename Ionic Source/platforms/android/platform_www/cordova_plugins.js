@@ -397,7 +397,6 @@ module.exports.metadata =
     "cordova-plugin-app-event": "1.2.0",
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-camera": "2.2.0",
-    "cordova-plugin-console": "1.0.3",
     "cordova-plugin-contacts": "2.1.0",
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-file": "4.2.0",
@@ -410,7 +409,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-x-socialsharing": "5.1.3",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "ionic-plugin-keyboard": "2.2.1"
+    "ionic-plugin-keyboard": "2.2.1",
+    "cordova-plugin-console": "1.0.4"
 };
 // BOTTOM OF METADATA
 });

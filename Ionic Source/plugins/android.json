@@ -10,9 +10,6 @@
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.taydo.hichat"
         },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.taydo.hichat"
-        },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.taydo.hichat"
         },
@@ -47,6 +44,9 @@
             "PACKAGE_NAME": "com.taydo.hichat"
         },
         "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.taydo.hichat"
         }
     },

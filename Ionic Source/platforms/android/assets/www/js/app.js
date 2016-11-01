@@ -1,7 +1,7 @@
 angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', 'ngStorage'])
 
 .run(function($ionicPlatform, $rootScope, $ionicPopup, $ionicHistory, $ionicLoading, $localStorage, $location, $filter, Location, $state) {
-	$rootScope.hostMail = 'http://dusannesicdevelopment.sytes.net/hichat/active.php';
+	$rootScope.hostMail = 'http://rebrand.im/app/active.php';
 	$rootScope.keyMap = 'AIzaSyAcrBFpjkE7Zt8M0mqdpGdAl8CgSTd4yLA';
 	$rootScope.getMap = 'https://maps.googleapis.com/maps/api/staticmap?key='+$rootScope.keyMap+'&';
 	$rootScope.linkDownload = 'http://hichatapp.com/dl?c=1234fmiakqua';
