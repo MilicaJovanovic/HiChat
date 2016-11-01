@@ -1,0 +1,26 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Contacs" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ui-sref="tab.settings"></button>
+  </div>
+  <h1 class="title">Contacts</h1>
+</ion-header-bar>
+<ion-content class="contacts-main">
+<div class="list">
+	<a class="item item-icon-right" ui-sref="tab.updateContacts"><span>Update phonebook</span><p ng-show="lastUpdate">Last updated: {{lastUpdate | date:'HH:mm, dd/MM/yyyy'}}</p>
+		<i class="icon ion-ios-arrow-right"></i></a>
+	<li class="item item-toggle">
+	<span>Auto sync contacts</span><p>On/Off auto sync phone contacts. turn on this mode to keep your Hichat contacts turn on this</p>
+     <label class="toggle toggle-calm" ng-click="changeContacts('auto_sync')">
+       <input type="checkbox" ng-model="settings.contacts.auto_sync">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+	<a class="item item-icon-right" ng-click="showPopupSettingsListFriends()"><span>Show friends in contacts</span><p>Friends who use Hichat</p>
+		<i class="icon ion-ios-arrow-right"></i></a>
+</div>
+</ion-content>
+</ion-view>

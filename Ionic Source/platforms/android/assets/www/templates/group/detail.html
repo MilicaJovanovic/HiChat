@@ -1,0 +1,48 @@
+<link href="css/messages.css" rel="stylesheet">
+<ion-view class="messages-detail">
+<ion-header-bar align-title="left" class="bar-positive">
+	<div class="buttons" ui-sref="tab.group">
+		<button class="button button-icon ion-android-arrow-back"></button>
+	</div>
+	<div class="title no-margin">
+		<div class="width-90 no-wrap">
+			<span ng-if="Groups.nameGroup.$value" ng-bind="Groups.nameGroup.$value"></span>
+			<span ng-if="!Groups.nameGroup.$value" ng-repeat="item in Groups.name | limitTo:3">
+					{{item.$value}}<span ng-if="!$last">, </span>
+			</span>
+		</div>
+		<h6 class="no-margin stable"><i class="ion-ios-people"></i> {{Groups.countUser.$value}} member</h6>
+	</div>
+</ion-header-bar>
+<ion-content class="padding-horizontal stable-bg" style="bottom:{{contentBottom}}" delegate-handle="mainScroll">
+	<div ng-repeat="item in Detail">
+		<div ng-if="item.time - Detail[$index-1].time >= 86400000" class="text-center padding-vertical conversation-time"><span>{{item.time | date:"dd/MM/yyyy"}}</span></div>
+		<div class="row row-no-padding" ng-class="{'row-reverse':item.from == Me}">
+			<div ng-if="item.from == Me" class="col col-top col-10 margin-left"><div ng-if="Detail[$index-1].from != item.from || item.time - Detail[$index-1].time >= 86400000">
+				<img class="img-avatar" ng-if="Groups.avatar[Me].$value" ng-src="{{Groups.avatar[Me].$value}}">
+				<img class="img-avatar" ng-if="!Groups.avatar[Me].$value" ng-src="css/img/avatar/{{Groups.name[Me].$value | firstChar}}.png">
+			</div></div>
+			<div ng-if="item.from != Me" class="col col-top col-10 margin-right"><div ng-if="Detail[$index-1].from != item.from || item.time - Detail[$index-1].time >= 86400000">
+				<img class="img-avatar" ng-if="Groups.avatar[item.from].$value" ng-src="{{Groups.avatar[item.from].$value}}">
+				<img class="img-avatar" ng-if="!Groups.avatar[item.from].$value" ng-src="css/img/avatar/{{Groups.name[item.from].$value | firstChar}}.png">
+			</div></div>
+			<div class="col col-80 relative">
+				<span ng-if="item.from != Detail[$index-1].from || item.time - Detail[$index-1].time >= 86400000" class="messages-from ion-arrow-up-b" ng-class="{'friend':item.from != Me}"></span>
+				<div class="width-100">
+					<span class="list-messages">
+						<div ng-if="item.from != Me && item.from != Detail[$index-1].from"><small class="stable">{{Groups.name[item.from].$value}}</small></div>
+						<span ng-if="item.type=='text'">{{item.content}}</span>
+						<img ng-if="item.type=='sticker'" ng-src="css/img/sticker/{{item.content}}.png">
+						<img ng-if="item.type=='picture'" ng-src="{{item.content}}">
+						<a ng-if="item.type=='location'" ng-click="openLink('https://google.com/maps/?q={{item.content.lat}},{{item.content.lng}}')">
+							<img ng-src="{{getMap}}center={{item.content.lat}},{{item.content.lng}}&zoom=18&size=300x300&markers=color:red%7Clabel:S%7C{{item.content.lat}},{{item.content.lng}}">
+						</a>
+						<div ng-if="item.from != Detail[$index+1].from" class="stable">{{item.time | date:'HH:mm'}}</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>
+<div class="width-100 messages-detail-footer" style="height:{{contentBottom}}" ng-include="'templates/messages/tabs-input.html'"></div>
+</ion-view>

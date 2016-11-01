@@ -1,0 +1,60 @@
+﻿body{
+	font-family:Roboto;
+	color:#383d43;
+	font-size:13px
+}
+a{color:#383d43}
+p{line-height:115%!important}
+.button{border-radius:50px}
+
+.popup{background:#fff!important}
+.tabs-top > .tabs, .tabs.tabs-top{border-bottom:1px solid #387ef5}
+.status-notification:after{
+	position:absolute;
+	font-size:10px;
+	background:#fc4a4a;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	border-radius:100%;
+}
+.bar-footer .button{color:#03a5fa}
+.button-small .icon:before{font-size:32px}
+i.icon.icon-missing-call{color:#fc4a4a!important}
+.popup{border-radius:5px!important}
+.img-avatar{border-radius:50%}
+.button-small.icon:before{font-size:26px}
+.popup-confirm-delete .popup{
+	background-color:#fdfefe;
+	border-radius:3px;
+	color:#7d8083
+}
+.popup-confirm-delete .popup-head{display:none}
+.popup-confirm-delete .popup-body{padding-bottom:0}
+.popup-confirm-delete .popup-buttons{
+	width:60%;
+	margin-left:auto;
+	padding:0;
+	min-height:45px
+}
+.popup-confirm-delete .button{
+	font-size:90%;
+	color:#383d43!important
+}
+.popup-confirm-delete .button.button-no-delete{color:#009df9!important}
+.popup-menu-contact .popup{background:#fff}
+.popup-menu-contact .popup-head{
+	text-align:left;
+	border:none
+}
+.popup-menu-contact .popup-buttons{
+	padding:0;
+	min-height:0px;
+	display:block
+}
+.popup-menu-contact .popup-buttons button{
+	width:100%;
+	text-align:left;
+	color:#383d43
+}

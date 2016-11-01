@@ -1,0 +1,88 @@
+﻿.button.button-clear{color:#04a5fa}
+
+.walkthrough-footer{
+	position:absolute;
+	bottom:20px;
+	left:0;
+	width:100%
+}
+.icon-right{text-decoration:underline}
+.icon-right i{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:100%;
+	background:#1aa0df;
+	color:#fff;
+	text-align:center
+}
+.icon-right i:before{line-height:20px}
+
+.login-main button.button-clear{
+	line-height:35px;
+	min-height:35px;
+	color:#98a2a7
+}
+.login-notifi{
+	color:#fb8889;
+	background:#f0f4f6
+}
+
+.modal-areacode .title{padding:5px 0;}
+.modal-areacode .title input{
+	height:100%;
+	background:none;
+	border-bottom:1px solid #6fc0f1;
+	color:#fff;
+	font-size:110%;
+	line-height:30px
+}
+.modal-areacode .title input::-webkit-input-placeholder{color:#ddebfa}
+.modal-areacode .title input::-ms-input-placeholder{color:#ddebfa}
+.modal-areacode .title input::-moz-placeholder{color:#ddebfa}
+.modal-areacode .list .item-divider{
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.modal-areacode .list .item{
+	padding-left:0;
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+
+.popup-forgot .popup{background:#fff}
+.popup-forgot .popup-body div{
+	color:#7d8083;
+	font-size:90%;
+}
+.popup-forgot .popup-buttons .button{
+	background:none;
+	color:#00a3fa
+}
+
+.edit-infomation .item{
+	border:none;
+	border-bottom:1px solid #ddd;
+}
+.edit-infomation .item input[type="radio"]{float:left;display:none}
+.edit-infomation label{line-height:25px}
+.edit-infomation .status-check{
+	margin-right:5px;
+	float:left;
+	display:inline-block;
+	position:relative;
+	width:25px;
+	height:25px;
+	border:1px solid #e4e4e4;
+	border-radius:2px
+}
+.edit-infomation .status-check i{	display:none;}
+.edit-infomation .status-check i:before{
+	color:#03a5fa;
+	line-height:23px;
+	font-size:32px
+}
+.edit-infomation .item input[type="radio"]:checked+label .status-check i{display:block}

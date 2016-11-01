@@ -1,0 +1,24 @@
+﻿<link href="css/location.css" rel="stylesheet">
+<ion-modal-view class="modal-search-location">
+	<ion-header-bar align-title="left" class="bar-light">
+	  <div class="buttons">
+		<button class="button" ng-click="closeSearchLocation()">
+			<i class="icon ion-android-arrow-back"></i>
+		</button>
+	  </div>
+	  <div class="title">
+		<input type="text" placeholder="Search for places" ng-model="data.search" class="width-100 no-padding">
+	  </div>
+	</ion-header-bar>
+	<ion-content class="location-main">
+	<ul class="list no-margin">
+		<div ng-if="!resuilt" class="padding text-center">Unable to find places, please check place name or try another search</div>
+		<div ng-repeat="location in resuilt">
+			<li class="item item-avatar stable-bg relative no-border" ng-click="selectLocation(location)">
+			<img ng-src="{{location.icon}}">
+			<div>{{location.name}}</div><p>{{location.formatted_address}}</p>
+			</li>
+		</div>
+	</ul>
+	</ion-content>
+</ion-modal-view>

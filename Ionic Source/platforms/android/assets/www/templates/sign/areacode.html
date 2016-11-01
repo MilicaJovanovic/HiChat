@@ -1,0 +1,23 @@
+<link href="css/sign.css" rel="stylesheet" type="text/css">
+<ion-modal-view class="modal-areacode">
+	<ion-header-bar align-title="left" class="bar-positive">
+	  <div class="buttons">
+		<button class="button" ng-click="closeareaCode()">
+			<i class="icon ion-android-arrow-back"></i>
+		</button>
+	  </div>
+	  <div class="title">
+		<input type="text" placeholder="Search" ng-model="search.name" class="width-100 no-padding">
+	  </div>
+	</ion-header-bar>
+	<ion-content class="padding">
+	<ul class="list no-margin" ng-repeat="areacode in areacodes">
+		<div ng-repeat="list in areacode.value | filter:search">
+			<div ng-show="$first" class="item item-divider">{{areacode.alpha}}</div>
+			<li class="item" ng-click="choseAreaCode(list.name,list.areacode)">
+				{{list.name}}<span class="item-note">+{{list.areacode}}</span>
+			</li>
+		</div>
+	</ul>
+	</ion-content>
+</ion-modal-view>

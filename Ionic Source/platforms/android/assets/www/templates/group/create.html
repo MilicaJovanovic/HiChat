@@ -1,0 +1,33 @@
+<link href="css/group.css" rel="stylesheet">
+<ion-view title="Create Group" hide-tabs="true" class="create-group">
+<ion-header-bar align-title="left" class="bar-stable">
+  <div class="buttons" ui-sref="tab.group">
+    <button class="button button-icon ion-android-arrow-back"></button>
+  </div>
+  <h1 class="title"><div>Create Group</div><span>{{selectedCount}}/99</span></h1>
+  <div class="buttons" ng-click="createGroup()">
+    <button class="button button-icon icon-planes" style="color:#387ef5" ng-disabled="selectedCount < 2"></button>
+  </div>
+</ion-header-bar>
+ <ion-content>
+	<div class="list no-margin">
+		<label class="item item-input"><input ng-model="search.name.$value" type="text" placeholder="Enter the name to find"></label>
+	</div>
+ 	<div class="list create-group-main no-margin no-padding" ng-repeat="contact in contacts | filter:search | orderBy:'name.$value'">
+		<div ng-if="$index == 0 || getAlpha($index)" class="item item-divider light-bg">{{contact.name.$value | firstChar}}</div>
+		<input type="checkbox" id="{{contact.$id}}" ng-change="change(contact)" ng-model="contact.selected">
+		<label class="item item-avatar" for="{{contact.$id}}">
+		  <img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
+		  <img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
+		  <div ng-show="contact.status == '1'" class="contact-status positive-bg"></div>
+		  <span>{{contact.name.$value}}</span>
+		  <div class="status-check"><i class="icon ion-checkmark"></i></div>
+		</label>
+	</div>
+ </ion-content>
+<ion-footer-bar>
+	<label class="item item-input row no-border">
+		<input ng-model="nameGroup" type="text" placeholder="Enter the name group">
+	</label>
+</ion-footer-bar>
+</ion-view>

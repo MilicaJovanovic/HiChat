@@ -1,0 +1,36 @@
+<ion-tabs>
+  <ion-tab icon="icon-text" on-select="messageInput('text')">
+	<ion-pane>
+	<ion-content scroll="false">
+	<div class="list messages-input-text padding-horizontal">
+	  <div class="item item-input no-padding no-border no-margin height-100">
+		<input type="text" placeholder="Type your message" class="height-100" ng-model="inputText.content">
+	  <button class="button button-icon icon-planes stable" ng-disabled="!inputText.content" ng-click="sendText()"></button>
+	  </div>
+	</div>
+	</ion-content>
+	</ion-pane>
+  </ion-tab>
+  <ion-tab icon="icon-camera" on-select="messageInput('camera')" ng-click="takePicture()">
+	<ion-pane>
+	<ion-content scroll="false">
+		<div class="bg-full-h relative row row-center no-padding" style="background-image:url({{inputPicture.content}});height:170px">
+			<div ng-if="!inputPicture.content" class="width-100 text-center">No images</div>
+			<button class="button button-icon send-camera icon-planes-top positive" ng-click="sendPicture()"></button>
+			<button ng-show="inputPicture.content" class="button button-icon cancel-picture ion-android-close positive" ng-click="inputPicture.content = null"></button>
+		</div>
+	</ion-content>
+	</ion-pane>
+  </ion-tab>
+  <ion-tab icon="icon-photo" ng-click="showInputImages()"></ion-tab>
+  <ion-tab icon="icon-smile" on-select="messageInput('sticker')">
+	<ion-pane>
+	<ion-content class="input-sticker-main">
+	<div ng-repeat="img in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]" class="messages-input-sticker float-left">
+		<img ng-src="css/img/sticker/{{img}}.png" ng-click="sendSticker(img)">
+	</div>
+	</ion-content>
+	</ion-pane>
+  </ion-tab>
+  <ion-tab icon="icon-location" ng-click="showSendLocation()"></ion-tab>
+</ion-tabs>

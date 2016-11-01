@@ -1,0 +1,20 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Settings">
+ <ion-content>
+	<div class="stable-bg padding-bottom">
+	<div class="list"><div class="item item-avatar" ui-sref="profiles">
+		<img ng-if="profile.avatar" ng-src="{{profile.avatar}}">
+		<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png">
+		<div>{{profile.name}}</div>
+		<small class="stable">My Profile</small>
+	</div></div>
+	</div>
+	<div class="list settings-main padding-horizontal">
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsMessages" ng-hide="true"><i class="icon icon-notification"></i>Messages and notification</a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsContacts" ng-hide="true"><i class="icon ion-person"></i>Contacts</a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsLanguages" ng-hide="true"><i class="icon icon-language"></i>Languages and fonts</a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="about"><i class="icon icon-info-border"></i>About us</a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsAccount"><i class="icon icon-key"></i>My account</a>
+	</div>
+ </ion-content>
+</ion-view>

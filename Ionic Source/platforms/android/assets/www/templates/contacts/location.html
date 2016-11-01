@@ -1,0 +1,17 @@
+<link href="css/contacts.css" rel="stylesheet">
+<ion-view title="Contacts Nearby" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="goBack()"></button>
+  </div>
+  <h1 class="title">Contacts Nearby</h1>
+  <div class="buttons">
+    <button class="button button-icon icon-list-location" ui-sref="tab.nearbyContacts"></button>
+  </div>
+</ion-header-bar>
+ <ion-content scroll="false" class="contacts-nearby-location">
+	<div id="map" class="height-100"></div>
+	<button class="button button-block button-light redo-search" ng-show="redosearch" ng-click="redosearch=false">Redo Search In This Area</button>
+	<button class="button button-icon ion-android-locate" ng-click="redosearch=true"></button>
+ </ion-content>
+</ion-view>

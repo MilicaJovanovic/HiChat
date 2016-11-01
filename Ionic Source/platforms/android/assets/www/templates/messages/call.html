@@ -1,0 +1,23 @@
+<link href="css/messages.css" rel="stylesheet" type="text/css">
+<ion-modal-view class="modal-call modal-full bg-full" view-cache="fasle">
+	<ion-content scroll="false">
+	<div class="row row-center height-50">
+		<div class="col text-center relative" style="padding-top:60px">
+		<img src="css/img/icon-avatar.png" style="width:{{call.size}}px;height:{{call.size}}px;padding:{{call.spacing}}px;border-width:{{call.spacing}}px;margin-left:{{call.margin}}px;top:{{call.top}}px">
+		<h3>Gojer</h3>
+		<h5 ng-show="callTime.minute > 0 || callTime.second > 0"><span ng-show="callTime.minute<10">0</span>{{callTime.minute}}:<span ng-show="callTime.second<10">0</span>{{callTime.second}}</h5>
+		<h5>{{callStatus}}<font ng-show="callStatus=='Quality:'" color="#00fd04"> Excellent</font></h5>
+		</div>
+	</div>
+	<div class="row row-center height-50">
+	<div class="col text-center col-80 col-offset-10">
+		<div class="call-button margin-auto">
+		  <button class="button icon ion-pause" ng-class="{'active':callListing}"><div>On hold</div></button>
+		  <button class="button icon ion-android-microphone-off" ng-class="{'active':callListing}"><div>Mute</div></button>
+		  <button class="button icon ion-volume-high active"><div>Speaker</div></button>
+		</div>
+		<button class="button button-assertive button-block margin-auto" ng-click="closeMessagesCall()">End</button>
+	</div>
+	</div>
+	</ion-content>
+</ion-modal-view>

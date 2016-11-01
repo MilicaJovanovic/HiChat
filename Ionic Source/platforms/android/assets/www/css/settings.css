@@ -1,0 +1,215 @@
+.settings-main .item{
+	border:none;
+	border-bottom:1px solid #ddd;
+	margin:0
+}
+
+.profiles-main .profiles-avatar div{
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:25px;
+    height:50px;
+    width:50px;
+    border-radius:100%;
+    font-size:32px;
+    color:#fff;
+    line-height:50px;
+}
+.profiles-avatar img{
+	border-radius:50%;
+	overflow:hidden;
+	max-width:155px;
+	max-height:155px
+}
+
+.profiles-main .icon.ion-edit{font-size:100%}
+.profiles-main .item-divider{
+	white-space:normal;
+	font-size:90%
+}
+.profiles-main .list.light-bg .item.no-padding{
+	padding:16px 0;
+	border-bottom:1px solid #ddd;
+	margin-bottom:16px
+}
+.profiles-main .list.light-bg input[type="radio"]{display:none}
+.profiles-main .list.light-bg label{
+	display:inline-block;
+	padding-left:10px
+}
+.profiles-main .list.light-bg .status-check{
+	font-family:"Ionicons";
+	font-size:25px;
+	line-height:18px;
+	text-align:center;
+	width:18px;
+	height:18px;
+	border:1px solid #03a0f2;
+	color:#03a0f2;
+	border-radius:2px
+}
+.profiles-main .list.light-bg .chose .status-check:after{
+	content:""
+}
+
+.modal-change-name ion-content .button{font-size:20px}
+.modal-change-name ion-content input[type="text"]{border-bottom: 1px solid #6ccaed}
+.modal-change-name .max-length{
+	position:absolute;
+	right:40px;
+	top:15px
+}
+.modal-change-name .absolute-footer .button{
+	border-radius:0;
+	border:1px solid #dcdcdc;
+	background:#fff;
+    font-size:90%
+}
+
+.modal-change-phone .button.ion-ios-checkmark-empty{font-size:14px!important}
+.modal-change-phone ion-content .item-divider{
+	background:#fff;
+	color:#a5a7a9;
+	white-space:normal
+}
+.modal-change-phone .item.item-input:before{content:"+"}
+.modal-change-phone .item.item-input{padding-right:16px}
+.modal-change-phone .item.item-input input{border-bottom:1px solid #919191}
+.modal-change-phone .item.item-input input:focus{border-color:#03a5fa}
+.modal-change-phone .areacode{
+	padding:0!important;
+	margin:0 5px;
+	text-align:center;
+}
+
+.messages-main .item.item-divider{
+	text-transform:uppercase;
+	font-size:90%;
+	border:none;
+	border-top:1px solid #ddd;
+}
+.messages-main .item.item-toggle{
+	border:none;
+	border-bottom:1px solid #ddd;
+	padding:10px 75px 10px 16px;
+	margin:0;
+	white-space:normal
+}
+.messages-main .item p{
+	font-size:70%;
+	white-space:normal
+}
+.messages-main .track{
+	border:none;
+	background:#e6e6e6
+}
+.messages-main .toggle input:checked + .track{background:#e6e6e6}
+.messages-main .track .handle{
+	background:#b6b6b6;
+	color:#fff
+}
+.messages-main .toggle input:checked + .track .handle{background:#03a5fa}
+.messages-main .handle:before{
+	padding:10px;
+	padding-left:24px;
+	content:"OFF";
+	font-size:80%
+}
+.messages-main .toggle input:checked + .track .handle:before{
+	content:"ON";
+	padding-left:26px;
+}
+
+.contacts-main .item.item-toggle{
+	padding:10px 75px 10px 16px;
+	white-space:normal
+}
+.contacts-main .item p{
+	font-size:70%;
+	white-space:normal
+}
+.contacts-main .track{
+	border:none;
+	background:#e6e6e6
+}
+.contacts-main .toggle input:checked + .track{background:#e6e6e6}
+.contacts-main .track .handle{
+	background:#b6b6b6;
+	color:#fff
+}
+.contacts-main .toggle input:checked + .track .handle{background:#03a5fa}
+.contacts-main .handle:before{
+	padding:10px;
+	padding-left:24px;
+	content:"OFF";
+	font-size:80%
+}
+.contacts-main .toggle input:checked + .track .handle:before{
+	content:"ON";
+	padding-left:26px;
+}
+
+.popup-select-radio .popup{background:#fff}
+.popup-select-radio .popup-head{
+	text-align:left;
+	border:none
+}
+.popup-select-radio .popup-body{padding:0 10px}
+.popup-select-radio .item-radio{
+	border:none;
+	margin:0;
+	background:none!important
+}
+.popup-select-radio .item-radio .radio-content{
+	margin-bottom:15px;
+	font-size:13px
+}
+.popup-select-radio .item-radio .item-content{padding:0}
+.popup-select-radio .item-radio .radio-icon{
+	padding:0;
+	visibility:visible;
+    font-size:21px;
+    line-height:20px;
+	height:20px;
+	top:-2px;
+	right:2px
+}
+.popup-select-radio .item-radio .radio-icon:before{content:"\f401"}
+.popup-select-radio .item-radio input:checked + .radio-content .item-content{background:none}
+.popup-select-radio .item-radio input:checked + .radio-content .radio-icon:before{
+	content:"\f400";
+	color:#4dcfff
+}
+
+.about-main .item{white-space:normal}
+
+.popup-confirm-logout .popup{
+	background-color:#fdfefe;
+	border-radius:3px;
+	color:#7d8083
+}
+.popup-confirm-logout .popup-head{display:none}
+.popup-confirm-logout .popup-buttons{
+	width:60%;
+	margin-left:auto;
+	padding:0;
+	min-height:45px
+}
+.popup-confirm-logout .button{
+	font-size:90%;
+	color:#383d43!important
+}
+.popup-confirm-logout .button.button-no-logout{
+	color:#009df9!important
+}
+
+.change-password-main button.button-clear{
+	line-height:35px;
+	min-height:35px;
+	color:#98a2a7
+}
+.change-password-main .notification{
+	color:#fb8889;
+	background:#f0f4f6
+}

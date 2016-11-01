@@ -1,0 +1,27 @@
+﻿<link href="css/group.css" rel="stylesheet">
+<ion-view title="Add To Group" hide-tabs="true" class="create-group">
+<ion-header-bar align-title="left" class="bar-stable">
+  <div class="buttons" ng-click="goBack()">
+    <button class="button button-icon ion-android-arrow-back"></button>
+  </div>
+  <h1 class="title">
+	  <div ng-if="name.$value">{{name.$value}}</div>
+	  <div ng-if="!name.$value">View Group</div>
+	  <span>{{count.$value}} user</span>
+  </h1>
+</ion-header-bar>
+ <ion-content>
+	<div class="list no-margin">
+		<label class="item item-input"><input ng-model="search.name.$value" type="text" placeholder="Enter the name to find"></label>
+	</div>
+ 	<div class="list create-group-main no-margin no-padding" ng-repeat="contact in contacts | orderBy:'name.$value' | filter:search">
+		<div ng-if="$index == 0 || getAlpha($index)" class="item item-divider light-bg">{{contact.name.$value | firstChar}}</div>
+		<label class="item item-avatar">
+		  <img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
+		  <img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
+		  <div ng-show="contact.status == '1'" class="contact-status positive-bg"></div>
+		  <span>{{contact.name.$value}}</span>
+		</label>
+	</div>
+ </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<link href="css/sign.css" rel="stylesheet">
+<ion-header-bar align-title="left" class="bar-positive">
+  <h1 class="title">Edit infomation</h1>
+</ion-header-bar>
+<ion-content scroll="false" class="stable-bg edit-infomation">
+	<div class="padding text-center login-notifi" ng-show="data.notification">
+		<span>{{data.notification}}</span>
+	</div>
+	<div class="list row light-bg" ng-init="data.gender='Male'">
+		<img ng-show="!data.avatar" class="col col-top col-25" ng-src="css/img/icon-camera.png" ng-click="takeAvatar()">
+		<img ng-show="data.avatar" class="col col-top col-25" ng-src="{{data.avatar}}" ng-click="takeAvatar()">
+		<div class="col col-75">
+		  <div class="item item-input no-padding-vertical no-margin">
+			<input ng-model="data.name" type="text" placeholder="Enter your name">
+			<button class="button button-clear" ng-click="data.name=null">
+			<i class="icon ion-ios-close-empty"></i></button>
+		  </div>
+		  <div class="item item-input no-margin">
+			<input type="radio" name="gender" ng-model="data.gender" id="male" value="Male">
+			<label class="width-50" for="male">
+			<div class="status-check"><i class="icon ion-android-checkbox absolute-full"></i></div> Male
+			</label>
+			<input type="radio" name="gender" ng-model="data.gender" id="female" value="Female">
+			<label class="width-50" for="female">
+			<div class="status-check"><i class="icon ion-android-checkbox absolute-full"></i></div> Female
+			</label>
+		  </div>
+		  <div class="item item-input no-padding-vertical no-margin no-border">
+			<input type="text" ng-model="data.birthday" placeholder="dd/mm/yyyy">
+		  </div>
+		</div>
+	</div>
+	<button ng-click="editInfomation()" class="button button-positive width-60 margin-auto">UPDATE</button>
+</ion-content>

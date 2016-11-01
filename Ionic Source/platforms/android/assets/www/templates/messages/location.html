@@ -1,0 +1,31 @@
+<link href="css/location.css" rel="stylesheet">
+<ion-header-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="goBack()"></button>
+  </div>
+  <h1 class="title no-margin-top">Location</h1>
+  <div class="buttons">
+    <button class="button button-icon ion-android-search" ng-click="showSearchLocation()"></button>
+  </div>
+</ion-header-bar>
+<ion-content class="location-main" scroll="false">
+	<div id="map" class="width-100 height-50 float-left"></div>
+	<div class="list no-margin">
+		<a class="item item-icon-left item-icon-right" ng-click="sendLocation()">
+		<i class="icon ion-ios-location assertive"></i>
+		<p ng-if="!data.name">Current position</p>
+		<p ng-if="data.name"><b>{{data.name}}</b></p>
+		<p>{{data.address}}</p>
+		<i class="icon icon-planes positive"></i></a>
+	</div>
+	<ion-scroll class="list no-margin height-30">
+		<div class="item item-divider light-bg">Recent Locations</div>
+		<div class="padding text-center" ng-show="recent.length <1">No location recent</div>
+		<div ng-repeat="location in recent">
+			<li class="item item-avatar relative no-border" ng-click="selectRecent(location)">
+			<img src="css/img/icon-location.jpg">
+			<div>{{location.name}}</div><p>{{location.address}}</p>
+			</li>
+		</div>
+	</ion-scroll>
+</ion-content>

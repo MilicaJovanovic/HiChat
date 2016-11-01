@@ -1,0 +1,23 @@
+﻿<link href="css/settings.css" rel="stylesheet">
+<ion-modal-view class="modal-change-name modal-full">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="closeChangeName()"></button>
+  </div>
+  <h1 class="title">Enter your name</h1>
+</ion-header-bar>
+<ion-content scroll="false">
+	<div class="list">
+	  <label class="item item-input no-border relative">
+		<input type="text" placeholder="Type your name" ng-model="profile.name" maxlength="20">
+		<div class="max-length stable">{{20 - profile.name.length}}</div>
+		<button class="button button-icon icon-smile"></button>
+	  </label>
+	</div>
+	<div class="row row-no-padding absolute-footer">
+		<button class="col button" ng-click="closeChangeName()">CANCEL</button>
+		<button class="col button" ng-click="changeName()">OK</button>
+	</div>
+</ion-content>
+</ion-view>
+</ion-modal-view>

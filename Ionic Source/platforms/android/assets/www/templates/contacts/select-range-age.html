@@ -1,0 +1,15 @@
+<div class="width-50 margin-auto" style="height:150px">
+	<div class="row row-no-padding height-100">
+	<div class="col" on-drag-up="plusFromAge()" on-drag-down="minusFromAge()">
+		<div class="select-item text-center stable" ng-click="selectRange(0,beforefrom)">{{beforefrom}}</div>
+		<div class="select-item text-center stable active">{{settings.fromage}}</div>
+		<div class="select-item text-center stable" ng-click="selectRange(0,afterfrom)">{{afterfrom}}</div>
+	</div>
+	<div class="col col-10 col-center text-center"> - </div>
+	<div class="col" on-drag-up="plusToAge()" on-drag-down="minusToAge()">
+		<div class="select-item text-center stable" ng-click="selectRange(1,beforeto)">{{beforeto}}</div>
+		<div class="select-item text-center stable active">{{settings.toage}}</div>
+		<div class="select-item text-center stable" ng-click="selectRange(1,afterto)">{{afterto}}</div>
+	</div>
+	</div>
+</div>

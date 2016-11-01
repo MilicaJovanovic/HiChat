@@ -1,0 +1,21 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Language and fonts" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ui-sref="tab.settings"></button>
+  </div>
+  <h1 class="title">Language and fonts</h1>
+</ion-header-bar>
+<ion-content class="contacts-main">
+<div class="list">
+	<a class="item item-icon-right" ng-click="showPopupSettingsLanguages()">
+		<span>Language</span><p>{{settings.languages.language}}</p>
+		<i class="icon ion-ios-arrow-right"></i></a>
+	<a class="item item-icon-right" ng-click="showPopupSettingsFonts()">
+		<span>Select font</span>
+		<p ng-if="settings.languages.font">Hichat fonts</p>
+		<p ng-if="!settings.languages.font">System fonts</p>
+		<i class="icon ion-ios-arrow-right"></i></a>
+</div>
+</ion-content>
+</ion-view>

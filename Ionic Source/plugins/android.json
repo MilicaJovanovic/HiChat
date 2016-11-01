@@ -8,57 +8,57 @@
     },
     "installed_plugins": {
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
+            "PACKAGE_NAME": "com.taydo.hichat"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
+            "PACKAGE_NAME": "com.taydo.hichat"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.taydo.hichat"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.taydo.hichat"
         },
         "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.taydo.hichat"
         },
-        "cordova-plugin-network-information": {
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.taydo.hichat"
         }
     },
     "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.taydo.hichat"
+        },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
+            "PACKAGE_NAME": "com.taydo.hichat"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
-        },
-        "cordova-plugin-app-event": {
-            "PACKAGE_NAME": "com.ionicframework.hichatfull191100"
+            "PACKAGE_NAME": "com.taydo.hichat"
         }
     }
 }

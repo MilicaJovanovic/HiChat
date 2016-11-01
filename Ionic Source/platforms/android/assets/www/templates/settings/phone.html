@@ -1,0 +1,22 @@
+﻿<link href="css/settings.css" rel="stylesheet">
+<ion-modal-view class="modal-change-phone modal-full">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ng-click="closeChangePhone()"></button>
+  </div>
+  <h1 class="title">Change number</h1>
+  <div class="buttons">
+    <button class="button button-icon ion-ios-checkmark-empty" ng-click="changePhone()"> DONE</button>
+  </div>
+</ion-header-bar>
+<ion-content class="stable-bg padding" scroll="false">
+	<div class="list stable">
+		<div class="item item-divider no-border">Please enter the country code and phone number new:</div>
+		<div class="item item-input no-border">
+			<input type="number" class="areacode col-20" ng-model="dataPhone.areacode">
+			<input type="number" placeholder="New phone number" ng-model="dataPhone.phone">
+		</div>
+	</div>
+</ion-content>
+</ion-view>
+</ion-modal-view>

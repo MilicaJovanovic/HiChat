@@ -1,0 +1,33 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Profiles" hide-tabs="true">
+<ion-header-bar align-title="left" class="bar-positive">
+  <div class="buttons">
+    <button class="button button-icon ion-android-arrow-back" ui-sref="tab.settings"></button>
+  </div>
+  <h1 class="title">Profiles</h1>
+</ion-header-bar>
+ <ion-content scroll="false" class="stable-bg profiles-main" style="font-size:120%">
+	<div class="row row-center height-40 padding-vertical">
+		<div class="col profiles-avatar relative">
+			<img ng-if="profile.avatar" ng-src="{{profile.avatar}}" class="margin-auto" width="155px">
+			<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png" class="margin-auto" width="155px">
+			<div class="positive-bg text-center" ng-click="changeAvatar()"><i class="icon ion-camera"></i></div>
+		</div>
+	</div>
+	<div class="list no-margin">
+		<a class="item item-icon-right" ng-click="showChangeName()">{{profile.name}}<i class="positive icon ion-edit"></i></a>
+		<div class="item item-divider">This is not a login name or pin code. This name will be the contact hichat found</div>
+	</div>
+	<div class="list light-bg" style="padding:16px">
+		<div class="positive">Phone number</div>
+		<div class="item no-padding no-border" ng-click="showChangePhone()">+{{profile.phone}}</div>
+		<span class="positive">Gender: </span>
+		<label ng-click="changeGender(0)" ng-class="{'chose':profile.gender=='Male'}">
+			<div class="status-check float-left margin-right"></div>Male
+		</label>
+		<label ng-click="changeGender(1)" ng-class="{'chose':profile.gender=='Female'}">
+			<div class="status-check float-left margin-right"></div>Female
+		</label>
+	</div>
+ </ion-content>
+</ion-view>
