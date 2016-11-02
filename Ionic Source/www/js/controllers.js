@@ -601,7 +601,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 .controller('contactsCtrl', function($scope, $ionicPopup, IonicClosePopupService, Block, Contacts, ContactsRecommended, User, $localStorage, $filter) {
 	$scope.showLoading('Loading...');
 	$scope.timeNow = new Date().getTime();
-	$scope.contactRecommended = ContactsRecommended($localStorage.userLogin.id).get();
+	$scope.contactRecommended = ContactsRecommended().get();
     $scope.contacts = Contacts($localStorage.userLogin.id).get();
 	$scope.contacts.$loaded(function(){
 		$scope.hideLoading();
@@ -672,13 +672,16 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('contactsRecommended', function($scope, ContactsRecommended, Contacts, User, $localStorage) {
 	$scope.showLoading('Loading...');
-	$scope.contacts = ContactsRecommended($localStorage.userLogin.id).get();
+	$scope.contacts = ContactsRecommended().get();
+	$scope.id = $localStorage.userLogin.id;
 	$scope.contacts.$loaded(function(){
 		$scope.hideLoading();
 		angular.forEach($scope.contacts, function(value){
+			value.id = value.$id;
 			value.name = User(value.$id).getName();
 			value.avatar = User(value.$id).getAvatar();
 			value.phone = User(value.$id).getPhone();
+			value.role = User(value.$id).getRole();
 		});
 	});
 	$scope.accept = function(id){
@@ -688,7 +691,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 })
 
 .controller('contactsAdd', function($scope, $state, $localStorage, $ionicPopup, Login) {
-  $scope.choseArea = {name:"United States","areacode":"1"};
+  $scope.choseArea = {name:"United Kingdom","areacode":"44"};
   $scope.warning = false;
   $scope.searchPerson = function(phone){
 	$scope.warning = false;

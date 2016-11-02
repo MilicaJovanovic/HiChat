@@ -9,11 +9,15 @@
  <ion-content>
 	<div class="list contacts-recommended">
 		<a class="item item-avatar" ng-repeat="contact in contacts">
-		  <img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
-		  <img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
-		  <h2>{{contact.name.$value}}</h2>
-		  <p>+{{contact.phone.$value}}</p>
-		  <button class="button button-outline button-positive" ng-click="accept(contact.$id)">Accept</button>
+			<div ng-if="contact.role.$value == 'normal'">
+				<div ng-if="contact.id != id">
+					<img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
+				  	<img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
+				  	<h2>{{contact.name.$value}}</h2>
+				  	<p>+{{contact.phone.$value}}</p>
+				  	<button class="button button-outline button-positive" ng-click="accept(contact.$id)">Add</button>
+				</div>
+		  </div>
 		</a>
 	</div>
  </ion-content>

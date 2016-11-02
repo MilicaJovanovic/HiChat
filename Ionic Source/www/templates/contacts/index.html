@@ -6,7 +6,7 @@
 		<a class="item item-icon-left item-icon-right" ui-sref="tab.recommended">
 			<i class="icon icon-linked positive"></i>
 			<span>
-				<span ng-show="contactRecommended.length >0">(+{{contactRecommended.length}})</span>
+				<span ng-show="contactRecommended.length >0">(+{{contactRecommended.length-1}})</span>
 				Recommended contacts
 			</span>
 			<i class="icon ion-ios-arrow-right"></i>
@@ -18,7 +18,7 @@
 	</div>
 	<div class="list contacts-main">
 	<div ng-repeat="contact in contacts | orderBy:'name.$value'">
-		<div ng-if="$index == 0 || getAlpha($index)" class="item item-divider">{{contact.name.$value | firstChar}}</div>
+		<div ng-if="$index == 0 || getAlpha($index)" class="item item-divider">{{contact.name.$value}}</div>
 		<a class="item item-avatar" on-hold="showMenuSearch(contact.name.$value,contact.$id)" ui-sref="detail({id:contact.$id})">
 		  <img ng-if="contact.avatar.$value" ng-src="{{contact.avatar.$value}}">
 		  <img ng-if="!contact.avatar.$value" ng-src="css/img/avatar/{{contact.name.$value | firstChar}}.png">
@@ -29,7 +29,6 @@
 	</div>
 	<div class="text-center">
 		<div>{{contacts.length}} friends</div>
-		<button class="button button-positive width-60 margin-auto" ui-sref="tab.updateContacts">UPDATE PHONE BOOK</button>
 	</div>
  </ion-content>
 	<ion-footer-bar align-title="left" class="bar-light">

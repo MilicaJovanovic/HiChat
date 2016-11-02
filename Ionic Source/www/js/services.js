@@ -79,6 +79,10 @@ angular.module('starter.services', ['firebase'])
 				item = item.child('phone');
 				return $firebaseObject(item)
 			},
+			getRole: function(){
+				item = item.child('role');
+				return $firebaseObject(item)
+			},
 			getLastSign: function(){
 				item = item.child('lastSign');
 				return $firebaseObject(item)
@@ -248,16 +252,12 @@ angular.module('starter.services', ['firebase'])
 })
 
 .factory("ContactsRecommended", function($firebaseArray) {
-	return function(id){
-		var item = firebase.database().ref('contactsRecommended/'+id);
+	return function(){
+		var item = firebase.database().ref('user');
 		return {
 			get: function(){ return $firebaseArray(item) },
-			post: function(friend){
-				item = firebase.database().ref('contactsRecommended/'+friend);
-				item.child(id).set(true);
-			},
-			remove: function(friend){
-				item.child(friend).remove();
+			remove: function(id){
+				item.child(id).remove();
 			}
 		}
 	}
