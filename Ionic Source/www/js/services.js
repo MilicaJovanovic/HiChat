@@ -26,7 +26,7 @@ angular.module('starter.services', ['firebase'])
 				item = item.orderByChild('email/value').equalTo(email);
 				return $firebaseObject(item);
 			},
-			set: function(phone){
+			set: function(phone, email){
 				item = item.child('maxID');
 				maxID = $firebaseObject(item);
 				maxID.$loaded(function(){
@@ -34,6 +34,7 @@ angular.module('starter.services', ['firebase'])
 					var user = firebase.database().ref('login').child(phone);
 					user.child('id').set(userID);
 					user.child('role').set('normal');
+					user.child('email').set(email);
 					item.set(userID);
 				});
 			},

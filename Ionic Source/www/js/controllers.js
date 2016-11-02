@@ -91,7 +91,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 				$scope.checkEmail = Login().getEmail($scope.data.email);
 				$scope.checkEmail.$loaded(function(){
 					if(angular.isDefined($scope.checkEmail.$value)){
-						Login().set($scope.data.fullPhone);
+						Login().set($scope.data.fullPhone,$scope.data.email);
 						Login().changePass($scope.data.fullPhone,$scope.data.password);
 						$http.head($scope.hostMail+'?email='+$scope.data.email+'&phone='+$scope.data.fullPhone).then(function(){
 							$scope.hideLoading();
@@ -693,19 +693,38 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 .controller('contactsAdd', function($scope, $state, $localStorage, $ionicPopup, Login) {
   $scope.choseArea = {name:"United Kingdom","areacode":"44"};
   $scope.warning = false;
-  $scope.searchPerson = function(phone){
-	$scope.warning = false;
-	$scope.phoneFull = $scope.choseArea.areacode + phone;
-	if($scope.phoneFull.length < 9) { $scope.warning = true }
-	else {
-		$scope.person = Login().get($scope.phoneFull);
-		$scope.person.$loaded(function(){
-			if(angular.isDefined($scope.person.id) && $scope.person.id != $localStorage.userLogin.id){
-				$state.go('tab.searchContacts', {id:$scope.person.id});
-			} else { $scope.warning = true }
+
+  $scope.searchPerson = function(email) {
+  	var result = firebase.database().ref('login');
+	result.on('value', card => {
+		let rawList = [];
+		card.forEach( snap => {
+			rawList.push({
+				id: snap.key,
+				email: snap.val().email
+			});
 		});
-	}
-  };
+		for (var i = 0; i < rawList.length; i++) {
+			if (rawList[i].email === email) {
+				$state.go('tab.searchContacts', {id:rawList[i].id});
+			}
+		}
+	});
+  }
+
+ //  $scope.searchPerson = function(phone){
+	// $scope.warning = false;
+	// $scope.phoneFull = $scope.choseArea.areacode + phone;
+	// if($scope.phoneFull.length < 9) { $scope.warning = true }
+	// else {
+	// 	$scope.person = Login().get($scope.phoneFull);
+	// 	$scope.person.$loaded(function(){
+	// 		if(angular.isDefined($scope.person.id) && $scope.person.id != $localStorage.userLogin.id){
+	// 			$state.go('tab.searchContacts', {id:$scope.person.id});
+	// 		} else { $scope.warning = true }
+	// 	});
+	// }
+ //  };
 	$scope.inviteSms = function(){
 		window.plugins.socialsharing.shareViaSMS(
 			$scope.inviteText,
