@@ -1,0 +1,136 @@
+#getStarted {
+	background-image: url("img/background.png");
+	background-size: contain;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+#getStartedCover {
+	background-color: black;
+	background-size: cover;
+	opacity: 0.7;
+	height: 370px;
+	padding-top: 30px;
+	display: block;
+	float: left;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#brandName {
+	background-image: url(img/brand-name.png); 
+	width: 160px;
+	height: 40px;
+	background-size: contain;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	margin-top: 20px;
+}
+#logo {
+	background-image: url(img/logo.png); 
+	width: 230px;
+	height: 110px;
+	background-size: contain;
+	margin-left: 34%;
+	margin-top: 60px;
+	z-index: 10;
+}
+#getStartedText {
+	color: #F2F2F2;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 70px;
+}
+#getStartedBtn {
+	border-radius: 0px !important;
+	width: 90% !important;
+	height: 50px !important;
+	margin-top: 110px !important;
+}
+.walkthrough-footer {
+	position:absolute;
+	left:0;
+	width:100%;
+}
+#registerForm {
+	height: 300px;
+	width: 100%;
+	background-color: white !important;
+	margin-top: 370px;
+}
+#formTitle {
+	text-align: center;
+	font-size: 20px;
+	color: black;
+	padding-top: 20px !important;
+	padding-bottom: 5px;
+}
+.btnWithIconDiv {
+	width: 90%;
+	height: 45px;
+	margin-left: 5%;
+	display: block;
+	float: left;
+	margin-bottom: 15px;
+	border-radius: 3px;
+}
+.btnWithIcon {
+	display: block;
+	float: left;
+	border: none !important;
+	color: white !important;
+	text-align: left;
+	font-size: 18px;
+	background-color: transparent;
+	width: 70%;
+	height: 50px;
+	margin-left: 1%;
+}
+#facebook {
+	background-color: #3B5998;
+}
+#google {
+	background-color: #D34836;
+}
+.iconsDiv {
+	width: 6%;
+	height: 20px;
+	display: block;
+	float: left;
+	margin-left: 19%;
+	margin-top: 4%;
+	text-align: right;
+	padding-right: 5px;
+}
+.icons {
+	color: white !important;
+	font-size: 24px !important;
+}
+#facebookIcon {
+	color: #3B5998 !important;
+}
+#facebookIconDiv {
+	background-color: white;
+}
+.simpleBtn {
+	background-color: #0090DF;
+	width: 90%;
+	height: 45px;
+	margin-left: 5%;
+	border: none !important;
+	color: white !important;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	float: left;
+	border-radius: 3px;
+}
+.formBottomText {
+	font-size: 16px;
+	color: black;
+	margin-left: 15%;
+	padding-top: 20px;
+	display: block;
+	float: left;
+}

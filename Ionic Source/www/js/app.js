@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 
 	.state('walkthrough', {
     url: '/walkthrough',
-    templateUrl: 'templates/sign/walkthrough.html',
+    templateUrl: 'templates/sign/walkthrough.html'
 	})
 
 	.state('register', {

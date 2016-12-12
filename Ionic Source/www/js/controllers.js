@@ -175,6 +175,23 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 			$state.go('tab.messages');
 		}
 	};
+	$scope.changeColorEmail = function() {
+		document.getElementById("emailDiv").className = "";
+		document.getElementById("emailDiv").className = "blueBorder";
+		document.getElementById("passDiv").className = "userInputDiv";
+
+		document.getElementById("emailIcon").className = "ion-ios-email-outline blueIcon";
+		document.getElementById("passIcon").className = "ion-ios-locked-outline icons";
+		document.getElementById("eyeIcon").className = "ion-ios-eye-outline eyeIcon";
+	}
+	$scope.changeColorPass = function() {
+		document.getElementById("passDiv").className = "";
+		document.getElementById("passDiv").className = "blueBorder";
+		document.getElementById("emailDiv").className = "userInputDiv";
+		document.getElementById("passIcon").className = "ion-ios-locked-outline blueIcon";
+		document.getElementById("eyeIcon").className = "ion-ios-eye-outline blueIcon";
+		document.getElementById("emailIcon").className = "ion-ios-email-outline icons";
+	}
 })
 
 .controller('tabCtrl', function($scope, $localStorage, Notification){
