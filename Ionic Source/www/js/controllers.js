@@ -179,7 +179,6 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		document.getElementById("emailDiv").className = "";
 		document.getElementById("emailDiv").className = "blueBorder";
 		document.getElementById("passDiv").className = "userInputDiv";
-
 		document.getElementById("emailIcon").className = "ion-ios-email-outline blueIcon";
 		document.getElementById("passIcon").className = "ion-ios-locked-outline icons";
 		document.getElementById("eyeIcon").className = "ion-ios-eye-outline eyeIcon";

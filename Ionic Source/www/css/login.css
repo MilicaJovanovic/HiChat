@@ -106,14 +106,14 @@
 	margin-top: 8px;
 	margin-left: 8px;
 }
-.iconsDiv {
+.loginIconsDiv {
 	width: 10%;
 	display: block;
 	float: left;
 	padding-left: 10px !important;
 	padding-top: 15px !important;
 }
-.icons {
+.loginIcons {
 	font-size: 28px !important;
 	color: gray !important;
 }
