@@ -43,7 +43,8 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	} else {
 		$scope.showLoading("Loading...");
 		$scope.data.notification = false;
-		$scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
+		// $scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
+		$scope.data.fullPhone = $scope.data.phone;
 		$scope.userLogin = Login().get($scope.data.fullPhone);
 		$scope.userLogin.$loaded(function(){
 			$scope.hideLoading();
@@ -180,7 +181,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		document.getElementById("emailDiv").className = "blueBorder";
 		document.getElementById("passDiv").className = "userInputDiv";
 		document.getElementById("emailIcon").className = "ion-ios-email-outline blueIcon";
-		document.getElementById("passIcon").className = "ion-ios-locked-outline icons";
+		document.getElementById("passIcon").className = "ion-ios-locked-outline loginIcons";
 		document.getElementById("eyeIcon").className = "ion-ios-eye-outline eyeIcon";
 	}
 	$scope.changeColorPass = function() {
@@ -189,7 +190,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		document.getElementById("emailDiv").className = "userInputDiv";
 		document.getElementById("passIcon").className = "ion-ios-locked-outline blueIcon";
 		document.getElementById("eyeIcon").className = "ion-ios-eye-outline blueIcon";
-		document.getElementById("emailIcon").className = "ion-ios-email-outline icons";
+		document.getElementById("emailIcon").className = "ion-ios-email-outline loginIcons";
 	}
 })
 

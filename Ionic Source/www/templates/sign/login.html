@@ -1,5 +1,5 @@
 <link href="css/login.css" rel="stylesheet">
-<ion-content scroll="false" id="getStarted">
+<ion-content scroll="false" id="getStarted" ng-controller="areacodeCtrl">
 	<div id="getStartedCover"></div>
 	<div class="walkthrough-footer">
 		<div class="bg-full" id="brandName"></div>
@@ -12,18 +12,18 @@
 			<div class="loginIconsDiv">
 				<i class="ion-ios-email-outline loginIcons" id="emailIcon"></i>
 			</div>
-			<input type="text" class="userInput" placeholder="Email">
+			<input type="number" class="userInput" placeholder="Enter phone number" ng-model="data.phone">
 		</div>
 		<div class="userInputDiv" ng-click="changeColorPass()" id="passDiv">
 			<div class="loginIconsDiv">
 				<i class="ion-ios-locked-outline loginIcons" id="passIcon"></i>
 			</div>
-			<input type="password" class="userInput" placeholder="Password">
+			<input type="password" ng-model="data.password" class="userInput" placeholder="Enter Password">
 			<div class="eyeIconDiv">
 				<i class="ion-ios-eye-outline eyeIcon" id="eyeIcon"></i>
 			</div>
 		</div>
-		<button class="simpleBtn">LOGIN</button>
+		<button class="simpleBtn" ng-click="login()">LOGIN</button>
 		<p class="formBottomText" ng-click="showForgot()"><u>Forgot password?</u></p>
 	</div>
 </ion-content>
