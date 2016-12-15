@@ -8,7 +8,7 @@
 	background-color: black;
 	background-size: cover;
 	opacity: 0.7;
-	height: 370px;
+	height: 450px;
 	padding-top: 30px;
 	display: block;
 	float: left;
@@ -57,7 +57,7 @@
 	height: 300px;
 	width: 100%;
 	background-color: white !important;
-	margin-top: 370px;
+	margin-top: 450px;
 }
 #formTitle {
 	text-align: center;
@@ -65,53 +65,6 @@
 	color: black;
 	padding-top: 20px !important;
 	padding-bottom: 5px;
-}
-.btnWithIconDiv {
-	width: 90%;
-	height: 45px;
-	margin-left: 5%;
-	display: block;
-	float: left;
-	margin-bottom: 15px;
-	border-radius: 3px;
-}
-.btnWithIcon {
-	display: block;
-	float: left;
-	border: none !important;
-	color: white !important;
-	text-align: left;
-	font-size: 18px;
-	background-color: transparent;
-	width: 70%;
-	height: 50px;
-	margin-left: 1%;
-}
-#facebook {
-	background-color: #3B5998;
-}
-#google {
-	background-color: #D34836;
-}
-.iconsDiv {
-	width: 6%;
-	height: 20px;
-	display: block;
-	float: left;
-	margin-left: 19%;
-	margin-top: 4%;
-	text-align: right;
-	padding-right: 5px;
-}
-.icons {
-	color: white !important;
-	font-size: 24px !important;
-}
-#facebookIcon {
-	color: #3B5998 !important;
-}
-#facebookIconDiv {
-	background-color: white;
 }
 .simpleBtn {
 	background-color: #0090DF;
@@ -130,7 +83,7 @@
 	font-size: 16px;
 	color: black;
 	margin-left: 15%;
-	padding-top: 20px;
+	padding-top: 40px;
 	display: block;
 	float: left;
 }
