@@ -1,19 +1,21 @@
 <link href="css/tabs.css" rel="stylesheet">
 <style ng-if="notification.messagesNew">ion-tabs .ion-chatbubble-working:after{content:'{{notification.messagesNew}}'}</style>
-<ion-tabs ng-class="{'tabs-item-hide': $root.hideTabs}" class="tabs-positive tabs-icon tabs-color-active-light">
-  <ion-tab icon="ion-chatbubble-working status-notification" ui-sref="tab.messages">
-    <ion-nav-view name="tab-messages"></ion-nav-view>
-  </ion-tab>
-  <ion-tab icon="ion-person" ui-sref="tab.contacts">
+<ion-tabs class="tabs-icon-top tabs-positive tabs-icon">
+  <ion-tab ui-sref="tab.contacts" title="CONTACTS" class="myTab">
     <ion-nav-view name="tab-contacts"></ion-nav-view>
   </ion-tab>
-  <ion-tab icon="ion-ios-people" ui-sref="tab.group">
+  <ion-tab title="CHATS" ui-sref="tab.messages" class="myTab">
+    <ion-nav-view name="tab-messages"></ion-nav-view>
+  </ion-tab>
+  <ion-tab  title="GROUPS" ui-sref="tab.group" class="myTab">
     <ion-nav-view name="tab-group"></ion-nav-view>
   </ion-tab>
-  <ion-tab icon="ion-android-more-horizontal" ui-sref="tab.settings">
+  <ion-tab title="SETTINGS" ui-sref="tab.settings" class="myTab">
     <ion-nav-view name="tab-settings"></ion-nav-view>
   </ion-tab>
-  <ion-tab icon="ion-ios-gear" ui-sref="tab.admin" hidden={{showTab}}>
+  <ion-tab title="ADMIN" ui-sref="tab.admin" hidden={{showTab}} class="myTab">
     <ion-nav-view name="tab-admin"></ion-nav-view>
   </ion-tab>
 </ion-tabs>
+
+<!-- ng-class="{'tabs-item-hide': $root.hideTabs}" class="tabs-positive tabs-icon tabs-color-active-light" -->

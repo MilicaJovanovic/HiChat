@@ -1,5 +1,5 @@
-<link href="css/register.css" rel="stylesheet">
-<ion-content scroll="false" id="getStarted">
+<link href="css/signup.css" rel="stylesheet">
+<ion-content scroll="false" id="getStarted" ng-controller="areacodeCtrl">
 	<div id="getStartedCover"></div>
 	<div class="walkthrough-footer">
 		<div class="bg-full" id="brandName"></div>
@@ -7,21 +7,34 @@
 		<p id="getStartedText">Cross platform chat app</p>
 	</div>
 	<div id="registerForm">
-		<p id="formTitle">SIGN UP</p>
-		<button class="simpleBtn" ui-sref="signup">Register</button>
-		<p class="formBottomText" ui-sref="login">Already have an account? <u>SIGN IN</u></p>
+		<a style="height: 50px !important" class="item item-icon-right" ng-click="showareaCode()">{{choseArea.name}} (+{{choseArea.areacode}})<i class="icon ion-ios-arrow-right"></i></a>
+	  <div class="item item-input" style="height: 50px !important">
+		<input ng-model="data.phone" type="number" placeholder="Enter phone number">
+		<button class="button button-clear" ng-click="data.phone=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+	  </div>
+	  <div class="item item-input" style="height: 50px !important">
+		<input ng-model="data.email" type="email" placeholder="Enter your email">
+		<button class="button button-clear" ng-click="data.email=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+	  </div>
+	  <div class="item item-input" style="height: 50px !important">
+		<input type="{{showValue.type}}" ng-model="data.password" placeholder="Enter password">
+		<button class="button button-clear" ng-click="data.password=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+		<button class="button button-clear" ng-click="showPassword()">{{showValue.text}}</button>
+	  </div>
+	  <div class="item item-input" style="height: 50px !important">
+		<input type="{{showValue.type}}" ng-model="data.repassword" placeholder="Confirm password">
+		<button class="button button-clear" ng-click="data.repassword=null">
+		<i class="icon ion-ios-close-empty"></i></button>
+	  </div>
+		<button class="button button-positive width-60 margin-auto simpleBtn" ng-click="register()">REGISTER</button>
 	</div>
 </ion-content>
 
-<!-- <link href="css/sign.css" rel="stylesheet">
-<ion-header-bar align-title="left" class="bar-positive">
-  <div class="buttons">
-    <button class="button" ng-click="goBack()">
-		<i class="icon ion-android-arrow-back"></i>
-	</button>
-  </div>
-  <h1 class="title">Register</h1>
-</ion-header-bar>
+
+<!-- 
 <ion-content scroll="false" class="stable-bg" ng-controller="areacodeCtrl">
 	<div class="list login-main">
 	<div class="padding text-center login-notifi" ng-show="data.notification">
