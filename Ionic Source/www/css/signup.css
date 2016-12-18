@@ -8,7 +8,7 @@
 	background-color: black;
 	background-size: cover;
 	opacity: 0.7;
-	height: 280px;
+	height: 250px;
 	padding-top: 30px;
 	display: block;
 	float: left;
@@ -57,7 +57,7 @@
 	height: 1000px;
 	width: 100%;
 	background-color: white !important;
-	margin-top: 280px;
+	margin-top: 250px;
 }
 .simpleBtn {
 	background-color: #0090DF;
