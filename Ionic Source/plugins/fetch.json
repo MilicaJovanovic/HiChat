@@ -135,5 +135,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "at.oneminutedistraction.phonenumber": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oneminutedistraction/phonenumber.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

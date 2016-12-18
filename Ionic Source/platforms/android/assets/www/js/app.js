@@ -11,10 +11,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
     }
-	// navigator.splashscreen.hide();
+	  navigator.splashscreen.hide();
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
+    window.plugins.sim.getSimInfo(
+    function(result) {
+      alert(result);
+    }, function(error) {
+      alert(error);
+    });
 	});
 	$rootScope.goBack = function(){
 		$ionicHistory.goBack();
@@ -89,7 +95,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 
 	.state('walkthrough', {
     url: '/walkthrough',
-    templateUrl: 'templates/sign/walkthrough.html',
+    templateUrl: 'templates/sign/walkthrough.html'
 	})
 
 	.state('register', {
@@ -97,6 +103,13 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
     templateUrl: 'templates/sign/register.html',
 	controller: 'signCtrl'
 	})
+
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'templates/sign/signup.html',
+  controller: 'signCtrl'
+  })
+
 
 	.state('login', {
     url: '/login',

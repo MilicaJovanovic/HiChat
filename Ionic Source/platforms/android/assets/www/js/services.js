@@ -26,7 +26,7 @@ angular.module('starter.services', ['firebase'])
 				item = item.orderByChild('email/value').equalTo(email);
 				return $firebaseObject(item);
 			},
-			set: function(phone){
+			set: function(phone, email){
 				item = item.child('maxID');
 				maxID = $firebaseObject(item);
 				maxID.$loaded(function(){
@@ -34,6 +34,7 @@ angular.module('starter.services', ['firebase'])
 					var user = firebase.database().ref('login').child(phone);
 					user.child('id').set(userID);
 					user.child('role').set('normal');
+					user.child('email').set(email);
 					item.set(userID);
 				});
 			},
@@ -77,6 +78,10 @@ angular.module('starter.services', ['firebase'])
 			},
 			getPhone: function(){
 				item = item.child('phone');
+				return $firebaseObject(item)
+			},
+			getRole: function(){
+				item = item.child('role');
 				return $firebaseObject(item)
 			},
 			getLastSign: function(){
@@ -248,16 +253,12 @@ angular.module('starter.services', ['firebase'])
 })
 
 .factory("ContactsRecommended", function($firebaseArray) {
-	return function(id){
-		var item = firebase.database().ref('contactsRecommended/'+id);
+	return function(){
+		var item = firebase.database().ref('user');
 		return {
 			get: function(){ return $firebaseArray(item) },
-			post: function(friend){
-				item = firebase.database().ref('contactsRecommended/'+friend);
-				item.child(id).set(true);
-			},
-			remove: function(friend){
-				item.child(friend).remove();
+			remove: function(id){
+				item.child(id).remove();
 			}
 		}
 	}

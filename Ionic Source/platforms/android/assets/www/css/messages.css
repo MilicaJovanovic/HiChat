@@ -141,8 +141,9 @@
 	position:relative
 }
 .row-reverse .list-messages{
-	background:#d2f0fe;
-	float:right
+	background:#0090DF;
+	float:right;
+	color: white !important;
 }
 .messages-detail .list-messages img{
 	border-radius:5px;
@@ -275,4 +276,7 @@
     width:100%;
     left:0;
     text-align:center;
+}
+.myTime {
+	float: right !important;
 }

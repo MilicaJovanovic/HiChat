@@ -1,88 +1,65 @@
-﻿.button.button-clear{color:#04a5fa}
-
-.walkthrough-footer{
+﻿#getStarted {
+	background-image: url("img/background.png");
+	background-size: cover;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+#getStartedCover {
+	background-color: black;
+	background-size: cover;
+	opacity: 0.7;
+	height: 100%;
+	padding-top: 30px;
+	display: block;
+	float: left;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#brandName {
+	background-image: url(img/brand-name.png); 
+	width: 160px;
+	height: 40px;
+	background-size: contain;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	margin-top: 30px;
+}
+#logo {
+	background-image: url(img/logo.png); 
+	width: 280px;
+	height: 130px;
+	background-size: contain;
+	margin-left: 32%;
+	margin-top: 100px;
+	z-index: 10;
+}
+#getStartedText {
+	color: #F2F2F2;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 100px;
+}
+#terms {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+#termsLink {
+	color: #6fc0f1 !important;
+	font-size: 16px !important;
+}
+#getStartedBtn {
+	border-radius: 0px !important;
+	width: 90% !important;
+	height: 50px !important;
+	margin-top: 110px !important;
+}
+.walkthrough-footer {
 	position:absolute;
-	bottom:20px;
 	left:0;
-	width:100%
+	width:100%;
 }
-.icon-right{text-decoration:underline}
-.icon-right i{
-	display:inline-block;
-	width:20px;
-	height:20px;
-	border-radius:100%;
-	background:#1aa0df;
-	color:#fff;
-	text-align:center
-}
-.icon-right i:before{line-height:20px}
-
-.login-main button.button-clear{
-	line-height:35px;
-	min-height:35px;
-	color:#98a2a7
-}
-.login-notifi{
-	color:#fb8889;
-	background:#f0f4f6
-}
-
-.modal-areacode .title{padding:5px 0;}
-.modal-areacode .title input{
-	height:100%;
-	background:none;
-	border-bottom:1px solid #6fc0f1;
-	color:#fff;
-	font-size:110%;
-	line-height:30px
-}
-.modal-areacode .title input::-webkit-input-placeholder{color:#ddebfa}
-.modal-areacode .title input::-ms-input-placeholder{color:#ddebfa}
-.modal-areacode .title input::-moz-placeholder{color:#ddebfa}
-.modal-areacode .list .item-divider{
-	background:none;
-	color:#7d8083;
-	text-transform:uppercase;
-	border:none!important
-}
-.modal-areacode .list .item{
-	padding-left:0;
-	margin:0;
-	border:none;
-	border-bottom:1px solid #ddd
-}
-
-.popup-forgot .popup{background:#fff}
-.popup-forgot .popup-body div{
-	color:#7d8083;
-	font-size:90%;
-}
-.popup-forgot .popup-buttons .button{
-	background:none;
-	color:#00a3fa
-}
-
-.edit-infomation .item{
-	border:none;
-	border-bottom:1px solid #ddd;
-}
-.edit-infomation .item input[type="radio"]{float:left;display:none}
-.edit-infomation label{line-height:25px}
-.edit-infomation .status-check{
-	margin-right:5px;
-	float:left;
-	display:inline-block;
-	position:relative;
-	width:25px;
-	height:25px;
-	border:1px solid #e4e4e4;
-	border-radius:2px
-}
-.edit-infomation .status-check i{	display:none;}
-.edit-infomation .status-check i:before{
-	color:#03a5fa;
-	line-height:23px;
-	font-size:32px
-}
-.edit-infomation .item input[type="radio"]:checked+label .status-check i{display:block}

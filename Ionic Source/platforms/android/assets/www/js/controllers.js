@@ -35,6 +35,9 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('signCtrl', function($scope, $state, $http, $ionicPopup, Login, User, Camera, $filter, $localStorage){
 	$scope.data = {};
+
+	$scope.data.phone = localStorage.getItem('number');
+
 	$scope.choseArea = {name:"United Kingdom","areacode":"44"};
 	$scope.showValue = {"type":"password","text":"Show"};
 	$scope.login = function(){
@@ -43,7 +46,8 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 	} else {
 		$scope.showLoading("Loading...");
 		$scope.data.notification = false;
-		$scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
+		// $scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
+		$scope.data.fullPhone = $scope.data.phone;
 		$scope.userLogin = Login().get($scope.data.fullPhone);
 		$scope.userLogin.$loaded(function(){
 			$scope.hideLoading();
@@ -91,7 +95,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 				$scope.checkEmail = Login().getEmail($scope.data.email);
 				$scope.checkEmail.$loaded(function(){
 					if(angular.isDefined($scope.checkEmail.$value)){
-						Login().set($scope.data.fullPhone);
+						Login().set($scope.data.fullPhone,$scope.data.email);
 						Login().changePass($scope.data.fullPhone,$scope.data.password);
 						$http.head($scope.hostMail+'?email='+$scope.data.email+'&phone='+$scope.data.fullPhone).then(function(){
 							$scope.hideLoading();
@@ -175,6 +179,22 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 			$state.go('tab.messages');
 		}
 	};
+	$scope.changeColorEmail = function() {
+		document.getElementById("emailDiv").className = "";
+		document.getElementById("emailDiv").className = "blueBorder";
+		document.getElementById("passDiv").className = "userInputDiv";
+		document.getElementById("emailIcon").className = "ion-ios-telephone-outline blueIcon";
+		document.getElementById("passIcon").className = "ion-ios-locked-outline loginIcons";
+		document.getElementById("eyeIcon").className = "ion-ios-eye-outline eyeIcon";
+	}
+	$scope.changeColorPass = function() {
+		document.getElementById("passDiv").className = "";
+		document.getElementById("passDiv").className = "blueBorder";
+		document.getElementById("emailDiv").className = "userInputDiv";
+		document.getElementById("passIcon").className = "ion-ios-locked-outline blueIcon";
+		document.getElementById("eyeIcon").className = "ion-ios-eye-outline blueIcon";
+		document.getElementById("emailIcon").className = "ion-ios-telephone-outline loginIcons";
+	}
 })
 
 .controller('tabCtrl', function($scope, $localStorage, Notification){
@@ -601,7 +621,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 .controller('contactsCtrl', function($scope, $ionicPopup, IonicClosePopupService, Block, Contacts, ContactsRecommended, User, $localStorage, $filter) {
 	$scope.showLoading('Loading...');
 	$scope.timeNow = new Date().getTime();
-	$scope.contactRecommended = ContactsRecommended($localStorage.userLogin.id).get();
+	$scope.contactRecommended = ContactsRecommended().get();
     $scope.contacts = Contacts($localStorage.userLogin.id).get();
 	$scope.contacts.$loaded(function(){
 		$scope.hideLoading();
@@ -672,13 +692,16 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('contactsRecommended', function($scope, ContactsRecommended, Contacts, User, $localStorage) {
 	$scope.showLoading('Loading...');
-	$scope.contacts = ContactsRecommended($localStorage.userLogin.id).get();
+	$scope.contacts = ContactsRecommended().get();
+	$scope.id = $localStorage.userLogin.id;
 	$scope.contacts.$loaded(function(){
 		$scope.hideLoading();
 		angular.forEach($scope.contacts, function(value){
+			value.id = value.$id;
 			value.name = User(value.$id).getName();
 			value.avatar = User(value.$id).getAvatar();
 			value.phone = User(value.$id).getPhone();
+			value.role = User(value.$id).getRole();
 		});
 	});
 	$scope.accept = function(id){
@@ -688,21 +711,40 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 })
 
 .controller('contactsAdd', function($scope, $state, $localStorage, $ionicPopup, Login) {
-  $scope.choseArea = {name:"United States","areacode":"1"};
+  $scope.choseArea = {name:"United Kingdom","areacode":"44"};
   $scope.warning = false;
-  $scope.searchPerson = function(phone){
-	$scope.warning = false;
-	$scope.phoneFull = $scope.choseArea.areacode + phone;
-	if($scope.phoneFull.length < 9) { $scope.warning = true }
-	else {
-		$scope.person = Login().get($scope.phoneFull);
-		$scope.person.$loaded(function(){
-			if(angular.isDefined($scope.person.id) && $scope.person.id != $localStorage.userLogin.id){
-				$state.go('tab.searchContacts', {id:$scope.person.id});
-			} else { $scope.warning = true }
+
+  $scope.searchPerson = function(email) {
+  	var result = firebase.database().ref('login');
+	result.on('value', card => {
+		let rawList = [];
+		card.forEach( snap => {
+			rawList.push({
+				id: snap.key,
+				email: snap.val().email
+			});
 		});
-	}
-  };
+		for (var i = 0; i < rawList.length; i++) {
+			if (rawList[i].email === email) {
+				$state.go('tab.searchContacts', {id:rawList[i].id});
+			}
+		}
+	});
+  }
+
+ //  $scope.searchPerson = function(phone){
+	// $scope.warning = false;
+	// $scope.phoneFull = $scope.choseArea.areacode + phone;
+	// if($scope.phoneFull.length < 9) { $scope.warning = true }
+	// else {
+	// 	$scope.person = Login().get($scope.phoneFull);
+	// 	$scope.person.$loaded(function(){
+	// 		if(angular.isDefined($scope.person.id) && $scope.person.id != $localStorage.userLogin.id){
+	// 			$state.go('tab.searchContacts', {id:$scope.person.id});
+	// 		} else { $scope.warning = true }
+	// 	});
+	// }
+ //  };
 	$scope.inviteSms = function(){
 		window.plugins.socialsharing.shareViaSMS(
 			$scope.inviteText,

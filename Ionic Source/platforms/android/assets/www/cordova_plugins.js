@@ -389,6 +389,13 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/at.oneminutedistraction.phonenumber/www/phonenumber.js",
+        "id": "at.oneminutedistraction.phonenumber.PhoneNumber",
+        "clobbers": [
+            "phonenumber"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -410,7 +417,8 @@ module.exports.metadata =
     "cordova-plugin-x-socialsharing": "5.1.3",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
     "ionic-plugin-keyboard": "2.2.1",
-    "cordova-plugin-console": "1.0.4"
+    "cordova-plugin-console": "1.0.4",
+    "at.oneminutedistraction.phonenumber": "0.0.1"
 };
 // BOTTOM OF METADATA
 });

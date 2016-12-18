@@ -16,18 +16,11 @@
 	</div>
 	<div class="list no-margin">
 		<a class="item item-icon-right" ng-click="showChangeName()">{{profile.name}}<i class="positive icon ion-edit"></i></a>
-		<div class="item item-divider">This is not a login name or pin code. This name will be the contact hichat found</div>
+		<div class="item item-divider">This is not a login name or pin code. This name will be the contact 'rebrandim' found</div>
 	</div>
 	<div class="list light-bg" style="padding:16px">
 		<div class="positive">Phone number</div>
 		<div class="item no-padding no-border" ng-click="showChangePhone()">+{{profile.phone}}</div>
-		<span class="positive">Gender: </span>
-		<label ng-click="changeGender(0)" ng-class="{'chose':profile.gender=='Male'}">
-			<div class="status-check float-left margin-right"></div>Male
-		</label>
-		<label ng-click="changeGender(1)" ng-class="{'chose':profile.gender=='Female'}">
-			<div class="status-check float-left margin-right"></div>Female
-		</label>
 	</div>
  </ion-content>
 </ion-view>

@@ -1,6 +1,6 @@
 ﻿#getStarted {
 	background-image: url("img/background.png");
-	background-size: contain;
+	background-size: cover;
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }

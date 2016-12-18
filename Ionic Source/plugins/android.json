@@ -48,6 +48,9 @@
         },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.taydo.hichat"
+        },
+        "at.oneminutedistraction.phonenumber": {
+            "PACKAGE_NAME": "com.taydo.hichat"
         }
     },
     "dependent_plugins": {

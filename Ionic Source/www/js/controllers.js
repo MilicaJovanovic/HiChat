@@ -35,6 +35,9 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 
 .controller('signCtrl', function($scope, $state, $http, $ionicPopup, Login, User, Camera, $filter, $localStorage){
 	$scope.data = {};
+
+	$scope.data.phone = localStorage.getItem('number');
+
 	$scope.choseArea = {name:"United Kingdom","areacode":"44"};
 	$scope.showValue = {"type":"password","text":"Show"};
 	$scope.login = function(){
