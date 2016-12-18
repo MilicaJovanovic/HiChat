@@ -160,7 +160,7 @@
 }
 
 
-/*.button.button-clear {
+.button.button-clear {
 	color:#04a5fa;
 }
 .icon-right {
@@ -264,4 +264,4 @@
 }
 .edit-infomation .item input[type="radio"]:checked+label .status-check i {
 	display:block
-}*/
+}
