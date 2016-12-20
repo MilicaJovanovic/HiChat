@@ -7,6 +7,12 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 	$rootScope.linkDownload = 'http://hichatapp.com/dl?c=1234fmiakqua';
 	$rootScope.inviteText = 'Invited you to install Hichat, the free texting application: '+$rootScope.linkDownload;
 	$ionicPlatform.ready(function() {
+    window.plugins.sim.getSimInfo(
+    function(result) {
+      alert(result);
+    }, function(error) {
+      alert(error);
+    });
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -15,12 +21,6 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-    window.plugins.sim.getSimInfo(
-    function(result) {
-      alert(result);
-    }, function(error) {
-      alert(error);
-    });
 	});
 	$rootScope.goBack = function(){
 		$ionicHistory.goBack();
