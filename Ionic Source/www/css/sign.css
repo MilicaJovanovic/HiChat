@@ -63,3 +63,546 @@
 	left:0;
 	width:100%;
 }
+
+/*register.css*/
+#getStartedRegister {
+	background-image: url("img/background.png");
+	background-size: cover;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+#getStartedCoverRegister {
+	background-color: black;
+	background-size: cover;
+	opacity: 0.7;
+	height: 400px;
+	padding-top: 30px;
+	display: block;
+	float: left;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#brandNameRegister {
+	background-image: url(img/brand-name.png); 
+	width: 160px;
+	height: 40px;
+	background-size: contain;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	margin-top: 20px;
+}
+#logoRegister {
+	background-image: url(img/logo.png); 
+	width: 230px;
+	height: 110px;
+	background-size: contain;
+	margin-left: 34%;
+	margin-top: 60px;
+	z-index: 10;
+}
+#getStartedTextRegister {
+	color: #F2F2F2;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 70px;
+}
+#getStartedBtnRegister {
+	border-radius: 0px !important;
+	width: 90% !important;
+	height: 50px !important;
+	margin-top: 110px !important;
+}
+.walkthrough-footerRegister {
+	position:absolute;
+	left:0;
+	width:100%;
+}
+#registerForm {
+	height: 1000px;
+	width: 100%;
+	background-color: white !important;
+	margin-top: 400px;
+}
+#formTitle {
+	text-align: center;
+	font-size: 20px;
+	color: black;
+	padding-top: 20px !important;
+	padding-bottom: 5px;
+}
+.simpleBtn {
+	background-color: #0090DF;
+	width: 90%;
+	height: 45px;
+	margin-left: 5%;
+	border: none !important;
+	color: white !important;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	float: left;
+	border-radius: 3px;
+}
+.formBottomTextRegister {
+	font-size: 16px;
+	color: black;
+	margin-left: 15%;
+	padding-top: 40px;
+	display: block;
+	float: left;
+}
+
+/*login.css*/
+#getStartedLogin {
+	background-image: url("img/background.png");
+	background-size: cover;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+#getStartedCoverLogin {
+	background-color: black;
+	background-size: cover;
+	opacity: 0.7;
+	height: 340px;
+	padding-top: 30px;
+	display: block;
+	float: left;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#brandNameLogin {
+	background-image: url(img/brand-name.png); 
+	width: 160px;
+	height: 40px;
+	background-size: contain;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	margin-top: 20px;
+}
+#logoLogin {
+	background-image: url(img/logo.png); 
+	width: 230px;
+	height: 110px;
+	background-size: contain;
+	margin-left: 34%;
+	margin-top: 60px;
+	z-index: 10;
+}
+#getStartedTextLogin {
+	color: #F2F2F2;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 70px;
+}
+#getStartedBtnLogin {
+	border-radius: 0px !important;
+	width: 90% !important;
+	height: 50px !important;
+	margin-top: 110px !important;
+}
+.walkthrough-footerLogin {
+	position:absolute;
+	left:0;
+	width:100%;
+}
+#registerFormLogin {
+	height: 300px;
+	width: 100%;
+	background-color: white !important;
+	margin-top: 340px;
+}
+#formTitle {
+	text-align: center;
+	font-size: 20px;
+	color: black;
+	padding-top: 20px !important;
+	padding-bottom: 5px;
+}
+.simpleBtn {
+	background-color: #0090DF;
+	width: 90%;
+	height: 40px;
+	margin-left: 5%;
+	border: none !important;
+	color: white !important;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	float: left;
+	border-radius: 3px;
+	margin-top: 25px;
+}
+.formBottomText {
+	font-size: 16px;
+	color: black;
+	margin-left: 30%;
+	padding-top: 10px;
+	display: block;
+	float: left;
+}
+.userInputDiv {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 50px;
+	background-color: transparent;
+	border-bottom: 1px solid gray;
+}
+.userInput {
+	width: 75%;
+	height: 40px !important;
+	background-color: transparent !important;
+	border: none !important;
+	display: block;
+	float: left;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+.loginIconsDiv {
+	width: 10%;
+	display: block;
+	float: left;
+	padding-left: 10px !important;
+	padding-top: 15px !important;
+}
+.loginIcons {
+	font-size: 28px !important;
+	color: gray !important;
+}
+.eyeIconDiv {
+	width: 10%;
+	display: block;
+	float: left;
+	padding-top: 15px;
+}
+.eyeIcon {
+	font-size: 28px !important;
+	color: gray !important;
+}
+.blueBorder {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 50px;
+	background-color: transparent;
+	border-bottom: 1px solid #0090DF;
+}
+.blueIcon {
+	font-size: 28px !important;
+	color: #0090DF !important;
+}
+::-webkit-input-placeholder {
+   color: gray;
+   padding: 5px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: gray;  
+   padding: 5px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: gray;  
+   padding: 5px !important;
+}
+
+:-ms-input-placeholder {  
+   color: gray;  
+   padding: 5px !important;
+}
+
+
+.button.button-clear {
+	color:#04a5fa;
+}
+.icon-right {
+	text-decoration:underline
+}
+.icon-right i {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:100%;
+	background:#1aa0df;
+	color:#fff;
+	text-align:center
+}
+.icon-right i:before { 
+	line-height:20px
+}
+
+.login-main button.button-clear {
+	line-height:35px;
+	min-height:35px;
+	color:#98a2a7
+}
+.login-notifi {
+	color:#fb8889;
+	background:#f0f4f6
+}
+
+.modal-areacode .title {
+	padding:5px 0;
+}
+.modal-areacode .title input {
+	height:100%;
+	background:none;
+	border-bottom:1px solid #6fc0f1;
+	color:#fff;
+	font-size:110%;
+	line-height:30px
+}
+.modal-areacode .title input::-webkit-input-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .title input::-ms-input-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .title input::-moz-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .list .item-divider {
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.modal-areacode .list .item {
+	padding-left:0;
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+
+.popup-forgot .popup {
+	background:#fff
+}
+.popup-forgot .popup-body div {
+	color:#7d8083;
+	font-size:90%;
+}
+.popup-forgot .popup-buttons .button {
+	background:none;
+	color:#00a3fa
+}
+
+.edit-infomation .item {
+	border:none;
+	border-bottom:1px solid #ddd;
+}
+.edit-infomation .item input[type="radio"] {
+	float:left;display:none
+}
+.edit-infomation label {
+	line-height:25px
+}
+.edit-infomation .status-check {
+	margin-right:5px;
+	float:left;
+	display:inline-block;
+	position:relative;
+	width:25px;
+	height:25px;
+	border:1px solid #e4e4e4;
+	border-radius:2px
+}
+.edit-infomation .status-check i {
+	display:none;
+}
+.edit-infomation .status-check i:before {
+	color:#03a5fa;
+	line-height:23px;
+	font-size:32px
+}
+.edit-infomation .item input[type="radio"]:checked+label .status-check i {
+	display:block
+}
+
+/*signup.css*/
+#getStartedSign {
+	background-image: url("img/background.png");
+	background-size: cover;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+#getStartedCoverSign {
+	background-color: black;
+	background-size: cover;
+	opacity: 0.7;
+	height: 250px;
+	padding-top: 30px;
+	display: block;
+	float: left;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#brandNameSign {
+	background-image: url(img/brand-name.png); 
+	width: 160px;
+	height: 40px;
+	background-size: contain;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 10;
+	margin-top: 10px;
+}
+#logoSign {
+	background-image: url(img/logo.png); 
+	width: 200px;
+	height: 100px;
+	background-size: contain;
+	margin-left: 34%;
+	margin-top: 30px;
+	z-index: 10;
+}
+#getStartedTextSign {
+	color: #F2F2F2;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+#getStartedBtnSign {
+	border-radius: 0px !important;
+	width: 90% !important;
+	height: 40px !important;
+	margin-top: 110px !important;
+}
+.walkthrough-footerSign {
+	position:absolute;
+	left:0;
+	width:100%;
+}
+#registerFormSign {
+	height: 1000px;
+	width: 100%;
+	background-color: white !important;
+	margin-top: 250px;
+}
+.simpleBtnSign {
+	background-color: #0090DF;
+	width: 90%;
+	height: 45px;
+	margin-left: 5%;
+	border: none !important;
+	color: white !important;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	float: left;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.button.button-clear {
+	color:#04a5fa;
+}
+.icon-right {
+	text-decoration:underline
+}
+.icon-right i {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:100%;
+	background:#1aa0df;
+	color:#fff;
+	text-align:center
+}
+.icon-right i:before { 
+	line-height:20px
+}
+
+.login-main button.button-clear {
+	line-height:35px;
+	min-height:35px;
+	color:#98a2a7
+}
+.login-notifi {
+	color:#fb8889;
+	background:#f0f4f6
+}
+
+.modal-areacode .title {
+	padding:5px 0;
+}
+.modal-areacode .title input {
+	height:100%;
+	background:none;
+	border-bottom:1px solid #6fc0f1;
+	color:#fff;
+	font-size:110%;
+	line-height:30px
+}
+.modal-areacode .title input::-webkit-input-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .title input::-ms-input-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .title input::-moz-placeholder {
+	color:#ddebfa
+}
+.modal-areacode .list .item-divider {
+	background:none;
+	color:#7d8083;
+	text-transform:uppercase;
+	border:none!important
+}
+.modal-areacode .list .item {
+	padding-left:0;
+	margin:0;
+	border:none;
+	border-bottom:1px solid #ddd
+}
+
+.popup-forgot .popup {
+	background:#fff
+}
+.popup-forgot .popup-body div {
+	color:#7d8083;
+	font-size:90%;
+}
+.popup-forgot .popup-buttons .button {
+	background:none;
+	color:#00a3fa
+}
+
+.edit-infomation .item {
+	border:none;
+	border-bottom:1px solid #ddd;
+}
+.edit-infomation .item input[type="radio"] {
+	float:left;display:none
+}
+.edit-infomation label {
+	line-height:25px
+}
+.edit-infomation .status-check {
+	margin-right:5px;
+	float:left;
+	display:inline-block;
+	position:relative;
+	width:25px;
+	height:25px;
+	border:1px solid #e4e4e4;
+	border-radius:2px
+}
+.edit-infomation .status-check i {
+	display:none;
+}
+.edit-infomation .status-check i:before {
+	color:#03a5fa;
+	line-height:23px;
+	font-size:32px
+}
+.edit-infomation .item input[type="radio"]:checked+label .status-check i {
+	display:block
+}
