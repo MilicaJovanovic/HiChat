@@ -70,7 +70,7 @@
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     <name>rebrand.im</name>
     <description>
-        Application HiChat, chat with your friend everywhere
+        Application rebrand.im, chat with your friend everywhere
     </description>
     <author email="ionic@taydotech.com" href="https://taydotech.com">
       TaydoTech

@@ -5,7 +5,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 	$rootScope.keyMap = 'AIzaSyAcrBFpjkE7Zt8M0mqdpGdAl8CgSTd4yLA';
 	$rootScope.getMap = 'https://maps.googleapis.com/maps/api/staticmap?key='+$rootScope.keyMap+'&';
 	$rootScope.linkDownload = 'http://hichatapp.com/dl?c=1234fmiakqua';
-	$rootScope.inviteText = 'Invited you to install Hichat, the free texting application: '+$rootScope.linkDownload;
+	$rootScope.inviteText = 'Invited you to install rebrand.im, the free texting application: '+$rootScope.linkDownload;
 	$ionicPlatform.ready(function() {
     window.plugins.sim.getSimInfo(
     function(result) {
@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
 		$rootScope.showNotification = function(numMessages){
 			cordova.plugins.notification.local.schedule({
 				id: 1,
-				title: "Hichat notification",
+				title: "rebrand.im notification",
 				text: "You have new messages",
 			});
 		};

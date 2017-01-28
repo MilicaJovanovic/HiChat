@@ -49,7 +49,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		$scope.showLoading("Loading...");
 		$scope.data.notification = false;
 		// $scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
-		$scope.data.fullPhone = $scope.data.phone;
+		$scope.data.fullPhone = '44' +  $scope.data.phone;
 		$scope.userLogin = Login().get($scope.data.fullPhone);
 		$scope.userLogin.$loaded(function(){
 			$scope.hideLoading();
@@ -1383,7 +1383,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		title: 'Friends list show in contacts',
 		cssClass: 'popup-select-radio',
 		scope: $scope,
-		template: '<ion-radio ng-model="settings.contacts.show_friend" ng-value="true" ng-click="changeContacts(\'show_friend\'); closePopupSettingsListFriends()">All friends</ion-radio><ion-radio ng-model="settings.contacts.show_friend" ng-value="false" ng-click="changeContacts(\'show_friend\'); closePopupSettingsListFriends()">Friends who use Hichat</ion-radio>'
+		template: '<ion-radio ng-model="settings.contacts.show_friend" ng-value="true" ng-click="changeContacts(\'show_friend\'); closePopupSettingsListFriends()">All friends</ion-radio><ion-radio ng-model="settings.contacts.show_friend" ng-value="false" ng-click="changeContacts(\'show_friend\'); closePopupSettingsListFriends()">Friends who use rebrand.im</ion-radio>'
 		});
 		$scope.closePopupSettingsListFriends = function(){
 			popupSettingsListFriends.close();
@@ -1412,7 +1412,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
 		title: 'Select font',
 		cssClass: 'popup-select-radio',
 		scope: $scope,
-		template: '<ion-radio ng-model="settings.languages.font" ng-value="true" ng-click="changeFont(); closePopupSettingsFonts()">Hichat font</ion-radio><ion-radio ng-model="settings.languages.font" ng-value="false" ng-click="changeFont(); closePopupSettingsFonts()">System font</ion-radio>'
+		template: '<ion-radio ng-model="settings.languages.font" ng-value="true" ng-click="changeFont(); closePopupSettingsFonts()">rebrand.im font</ion-radio><ion-radio ng-model="settings.languages.font" ng-value="false" ng-click="changeFont(); closePopupSettingsFonts()">System font</ion-radio>'
 		});
 		$scope.closePopupSettingsFonts = function(){
 			popupSettingsFonts.close();
